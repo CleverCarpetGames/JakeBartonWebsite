@@ -52,10 +52,14 @@ sort($years);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?> - Jake Barton</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="animated-bg"></div>
+
     <header>
         <nav>
+            <div class="nav-logo">JB</div>
             <ul>
                 <li><a href="../../index.php">Home</a></li>
                 <li><a href="../">Portfolio</a></li>
@@ -65,15 +69,20 @@ sort($years);
     </header>
 
     <div class="container">
-        <div class="content-section">
+        <div class="content-section" style="text-align: center; padding: 60px;">
             <h1><?php echo $pageTitle; ?></h1>
-            <p>A collection of t-shirt designs I've created over the years, showcasing my graphic design work and creative evolution.</p>
+            <p style="font-size: 1.2rem; color: var(--text-muted); margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                A showcase of custom t-shirt designs I've created as <strong style="color: var(--accent-blue);">T-Shirt Chair</strong> 
+                for Pi Kappa Phi Fraternity - Alpha Eta Chapter over the past two years.
+            </p>
+        </div>
 
+        <div class="content-section">
             <!-- Filter Controls -->
             <div class="filter-controls">
-                <button class="filter-btn active" data-filter="all">All Designs</button>
+                <button class="filter-btn active" data-filter="all"><span>All Designs</span></button>
                 <?php foreach ($years as $year): ?>
-                    <button class="filter-btn" data-filter="<?php echo $year; ?>"><?php echo $year; ?></button>
+                    <button class="filter-btn" data-filter="<?php echo $year; ?>"><span><?php echo $year; ?></span></button>
                 <?php endforeach; ?>
             </div>
 
@@ -95,6 +104,12 @@ sort($years);
                 <?php endforeach; ?>
             </div>
         </div>
+
+        <div class="content-section" style="text-align: center;">
+            <p style="color: var(--text-muted); font-size: 1.1rem;">
+                Click on any design to view it in full size. More designs will be added as they are created!
+            </p>
+        </div>
     </div>
 
     <!-- Modal for full-size images -->
@@ -107,7 +122,7 @@ sort($years);
             <div class="modal-info">
                 <h2 id="modalTitle"></h2>
                 <p id="modalDescription"></p>
-                <p><strong>Year:</strong> <span id="modalYear"></span></p>
+                <p><strong style="color: var(--accent-blue);">Year:</strong> <span id="modalYear"></span></p>
             </div>
         </div>
     </div>

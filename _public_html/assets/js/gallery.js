@@ -1,4 +1,4 @@
-// Gallery and Modal functionality
+// Gallery and Modal functionality with enhanced animations
 class GalleryManager {
     constructor() {
         this.currentIndex = 0;
@@ -14,6 +14,19 @@ class GalleryManager {
         } else {
             this.setup();
         }
+        
+        // Add parallax scrolling effect
+        this.addParallaxEffect();
+    }
+
+    addParallaxEffect() {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.animated-bg');
+            parallaxElements.forEach(el => {
+                el.style.transform = `translateY(${scrolled * 0.5}px)`;
+            });
+        });
     }
 
     setup() {
