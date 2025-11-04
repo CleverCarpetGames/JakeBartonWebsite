@@ -1,0 +1,18 @@
+# Enable URL Rewriting
+RewriteEngine On
+
+# Redirect index.php to /home in browser
+RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+RewriteRule ^index\.php$ /home [R=301,L]
+
+# Internally route /home to index.php
+RewriteRule ^home$ index.php [L]
+
+# Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Force HTTPS (uncomment when on live server)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

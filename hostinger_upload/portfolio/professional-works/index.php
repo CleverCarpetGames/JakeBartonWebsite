@@ -46,6 +46,21 @@
                 </span>
             </div>
 
+            <!-- College Guys Pressure Washing Card -->
+            <div class="content-section" style="text-align: center; padding: 60px 40px; transition: all 0.4s ease; cursor: pointer;"
+                 onclick="window.location.href='College Guys Pressure Washing/';"
+                 onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 20px 60px rgba(255, 255, 255, 0.15)'; this.style.borderColor='var(--accent-white)';"
+                 onmouseout="this.style.transform=''; this.style.boxShadow=''; this.style.borderColor='var(--border-gray)';">
+                <div style="font-size: 5rem; margin-bottom: 25px; filter: grayscale(100%);">💦</div>
+                <h2 style="color: var(--accent-white); margin-bottom: 20px;">COLLEGE GUYS PRESSURE WASHING</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">
+                    Branding & marketing graphics for local pressure washing business
+                </p>
+                <span class="btn" style="color: var(--accent-white); font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px;">
+                    CLIENT: COLLEGE GUYS PRESSURE WASHING
+                </span>
+            </div>
+
             <!-- More Professional Projects Coming Soon -->
             <div class="content-section" style="text-align: center; padding: 60px 40px; opacity: 0.5;">
                 <div style="font-size: 5rem; margin-bottom: 25px; filter: grayscale(100%);">📊</div>

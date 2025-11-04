@@ -14,6 +14,16 @@ $games = [
         'playLink' => 'phase-runner/',
         'controls' => 'Keyboard: Arrow Keys or WASD to move'
     ],
+    [
+        'id' => 2,
+        'title' => 'Captain\'s Log',
+        'description' => 'Pixel art tileset and sprite design for a retro-style adventure game. Custom hand-crafted tiles and character sprites.',
+        'year' => '2024',
+        'tech' => ['Pixel Art', 'Game Design', 'Sprites & Tiles'],
+        'thumbnail' => '../captainslogtruetiles.png',
+        'playLink' => null,
+        'isArt' => true
+    ],
     // Add more games here as you create them
 ];
 ?>
@@ -177,9 +187,15 @@ $games = [
                         </div>
                         <?php endif; ?>
 
+                        <?php if (!empty($game['playLink'])): ?>
                         <a href="<?php echo $game['playLink']; ?>" class="btn" style="margin-top: 25px; display: inline-block;">
                             PLAY NOW
                         </a>
+                        <?php elseif (isset($game['isArt']) && $game['isArt']): ?>
+                        <span class="btn" style="margin-top: 25px; display: inline-block; opacity: 0.8; cursor: default;">
+                            GAME ART
+                        </span>
+                        <?php endif; ?>
                     </div>
                 </div>
             <?php endforeach; ?>

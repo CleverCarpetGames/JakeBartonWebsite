@@ -111,6 +111,22 @@ $designs = [
         'thumbnail' => 'images/thumbnails/PGA Polo.svg',
         'full' => 'images/full/PGA Polo.svg'
     ],
+    [
+        'id' => 14,
+        'title' => 'Samford Film Club',
+        'description' => 'Custom t-shirt design for Samford Film Club',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/Samford Film.svg',
+        'full' => 'images/full/Samford Film.svg'
+    ],
+    [
+        'id' => 15,
+        'title' => 'Samford Walk the Walk',
+        'description' => 'Custom t-shirt design for Samford University Spiritual Life',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/Samford Walk the Walk.svg',
+        'full' => 'images/full/Samford Walk the Walk.svg'
+    ],
     // Add more designs here as you upload them
 ];
 

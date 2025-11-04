@@ -36,7 +36,7 @@
     $contact = [
         'email' => 'jbarton4@samford.edu',
         'phone' => '615.943.9722',
-        'address' => '800 Lakeshore Dr., Birmingham, AL',
+        'address' => '4147 Miles Johnson Pkwy, Birmingham, AL',
         'instagram' => 'jakebarton13',
         'github' => '', // To be added later
         'youtube' => '' // To be added later
@@ -72,73 +72,126 @@
         </div>
 
         <!-- Auto-Rotating Showcase Gallery -->
-        <div class="content-section" style="padding: 60px 0; overflow: hidden;">
+        <div class="content-section" style="padding: 60px 40px; overflow: visible;">
             <h2 style="text-align: center; margin-bottom: 50px;">FEATURED WORK</h2>
             
-            <div class="showcase-gallery">
-                <div class="showcase-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
                     <!-- T-Shirt Designs -->
-                    <div class="showcase-item">
-                        <img src="portfolio/tshirt-designs/images/thumbnails/Fall Recruitment '25-01.svg" alt="Fall Recruitment 2025">
-                        <div class="showcase-caption">
-                            <h3>Fall Recruitment 2025</h3>
-                            <p>T-Shirt Design</p>
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <img src="portfolio/tshirt-designs/images/thumbnails/Fall Recruitment '25-01.svg" alt="Fall Recruitment 2025">
+                            <div class="carousel-info">
+                                <h3>Fall Recruitment 2025</h3>
+                                <p>T-Shirt Design</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="showcase-item">
-                        <img src="portfolio/professional-works/33-miles-graphics/images/thumbnails/33-miles-01-grain-striped.png" alt="33Miles Graphics">
-                        <div class="showcase-caption">
-                            <h3>33Miles Band Graphics</h3>
-                            <p>Professional Client Work</p>
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <img src="portfolio/games/phase-runner/PhaseRunnerWeb.png" alt="Phase Runner Game">
+                            <div class="carousel-info">
+                                <h3>Phase Runner</h3>
+                                <p>Godot Game Project</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="showcase-item">
-                        <img src="portfolio/tshirt-designs/images/thumbnails/SouthernGents-01.svg" alt="Southern Gents Design">
-                        <div class="showcase-caption">
-                            <h3>Southern Gents</h3>
-                            <p>Album-Inspired T-Shirt</p>
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <img src="portfolio/professional-works/33-miles-graphics/images/thumbnails/33-miles-01-grain-striped.png" alt="33Miles Graphics">
+                            <div class="carousel-info">
+                                <h3>33Miles Band Graphics</h3>
+                                <p>Professional Client Work</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="showcase-item">
-                        <img src="portfolio/professional-works/33-miles-graphics/images/thumbnails/33-miles-regular-01.png" alt="33Miles Clean Design">
-                        <div class="showcase-caption">
-                            <h3>33Miles Social Media</h3>
-                            <p>Event Advertisement</p>
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <img src="portfolio/tshirt-designs/images/thumbnails/PGA Polo.svg" alt="PGA Polo Design">
+                            <div class="carousel-info">
+                                <h3>PGA Polo</h3>
+                                <p>Polo Shirt Design</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="showcase-item">
-                        <img src="portfolio/tshirt-designs/images/thumbnails/Barn Bash 2025.svg" alt="Barn Bash 2025">
-                        <div class="showcase-caption">
-                            <h3>Barn Bash 2025</h3>
-                            <p>Event T-Shirt Design</p>
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <img src="portfolio/tshirt-designs/images/thumbnails/SouthernGents-01.svg" alt="Southern Gents Design">
+                            <div class="carousel-info">
+                                <h3>Southern Gents</h3>
+                                <p>Album-Inspired T-Shirt</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="showcase-item">
-                        <img src="portfolio/professional-works/33-miles-graphics/images/thumbnails/33-miles-05-grain-regular.png" alt="33Miles Grainy Design">
-                        <div class="showcase-caption">
-                            <h3>33Miles Grainy Style</h3>
-                            <p>Textured Graphics</p>
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <img src="portfolio/professional-works/33-miles-graphics/images/thumbnails/33-miles-regular-01.png" alt="33Miles Clean Design">
+                            <div class="carousel-info">
+                                <h3>33Miles Social Media</h3>
+                                <p>Event Advertisement</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="showcase-item">
-                        <img src="portfolio/tshirt-designs/images/thumbnails/Caribbean Party.svg" alt="Caribbean Party Design">
-                        <div class="showcase-caption">
-                            <h3>Caribbean Party</h3>
-                            <p>Themed Event Design</p>
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <img src="portfolio/tshirt-designs/images/thumbnails/Fall Recruitment '25-02.svg" alt="Fall Recruitment 2025 Alt">
+                            <div class="carousel-info">
+                                <h3>Fall Recruitment 2025 Alt</h3>
+                                <p>T-Shirt Design Variation</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="showcase-item">
-                        <img src="portfolio/tshirt-designs/images/thumbnails/Rose Ball.svg" alt="Rose Ball Design">
-                        <div class="showcase-caption">
-                            <h3>Rose Ball</h3>
-                            <p>Formal Event Design</p>
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <img src="portfolio/tshirt-designs/images/thumbnails/Barn Bash 2025.svg" alt="Barn Bash 2025">
+                            <div class="carousel-info">
+                                <h3>Barn Bash 2025</h3>
+                                <p>Event T-Shirt Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <img src="portfolio/professional-works/33-miles-graphics/images/thumbnails/33-miles-05-grain-regular.png" alt="33Miles Grainy Design">
+                            <div class="carousel-info">
+                                <h3>33Miles Grainy Style</h3>
+                                <p>Textured Graphics</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <img src="portfolio/tshirt-designs/images/thumbnails/Caribbean Party.svg" alt="Caribbean Party Design">
+                            <div class="carousel-info">
+                                <h3>Caribbean Party</h3>
+                                <p>Themed Event Design</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Navigation Dots -->
+                <div class="carousel-dots"></div>
             </div>
 
             <div style="text-align: center; margin-top: 50px;">
                 <a href="portfolio/" class="btn">EXPLORE FULL PORTFOLIO</a>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="content-section" id="skills">
+            <h2>TECHNICAL SKILLS & TOOLS</h2>
+            <p style="margin-bottom: 30px;">Technologies and software I work with:</p>
+            <div class="skills-container">
+                <div class="skills-wrapper">
+                    <?php foreach ($skills as $skill): ?>
+                        <span class="skill-tag"><?php echo $skill; ?></span>
+                    <?php endforeach; ?>
+                    <?php foreach ($skills as $skill): ?>
+                        <span class="skill-tag"><?php echo $skill; ?></span>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
         
@@ -221,17 +274,6 @@
             </div>
         </div>
 
-        <!-- Skills Section -->
-        <div class="content-section" id="skills">
-            <h2>TECHNICAL SKILLS & TOOLS</h2>
-            <p style="margin-bottom: 30px;">Technologies and software I work with:</p>
-            <div class="skills-container">
-                <?php foreach ($skills as $skill): ?>
-                    <span class="skill-tag"><?php echo $skill; ?></span>
-                <?php endforeach; ?>
-            </div>
-        </div>
-
         <!-- Contact Section -->
         <div class="content-section" id="contact">
             <h2>GET IN TOUCH</h2>
@@ -246,26 +288,27 @@
                     <h3 style="color: var(--accent-white); font-size: 2rem; margin-bottom: 25px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px;">
                         SEND ME A MESSAGE
                     </h3>
-                    <form action="mailto:<?php echo $contact['email']; ?>" method="post" enctype="text/plain">
+                    <form id="contactForm" method="post">
                         <div style="margin-bottom: 20px;">
                             <label style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: bold; letter-spacing: 1px;">YOUR NAME</label>
-                            <input type="text" name="name" required 
+                            <input type="text" name="name" id="contactName" required 
                                    style="width: 100%; padding: 15px; background: var(--primary-black); border: 2px solid var(--border-gray); 
                                    color: var(--text-light); font-size: 1rem; border-radius: 0px; transition: border-color 0.3s;">
                         </div>
                         <div style="margin-bottom: 20px;">
                             <label style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: bold; letter-spacing: 1px;">YOUR EMAIL</label>
-                            <input type="email" name="email" required 
+                            <input type="email" name="email" id="contactEmail" required 
                                    style="width: 100%; padding: 15px; background: var(--primary-black); border: 2px solid var(--border-gray); 
                                    color: var(--text-light); font-size: 1rem; border-radius: 0px; transition: border-color 0.3s;">
                         </div>
                         <div style="margin-bottom: 20px;">
                             <label style="display: block; color: var(--text-light); margin-bottom: 8px; font-weight: bold; letter-spacing: 1px;">MESSAGE</label>
-                            <textarea name="message" rows="6" required 
+                            <textarea name="message" id="contactMessage" rows="6" required 
                                       style="width: 100%; padding: 15px; background: var(--primary-black); border: 2px solid var(--border-gray); 
                                       color: var(--text-light); font-size: 1rem; border-radius: 0px; resize: vertical; transition: border-color 0.3s;"></textarea>
                         </div>
-                        <button type="submit" class="btn" style="width: 100%; margin: 0;">SEND MESSAGE</button>
+                        <div id="formMessage" style="margin-bottom: 15px; padding: 10px; display: none; border-radius: 0px; font-weight: bold; letter-spacing: 1px;"></div>
+                        <button type="submit" id="submitBtn" class="btn" style="width: 100%; margin: 0;">SEND MESSAGE</button>
                     </form>
                 </div>
 
@@ -344,9 +387,7 @@
             <p style="font-size: 1.2rem; margin-bottom: 40px;">
                 Explore my portfolio featuring game projects, 3D artwork, and design work.
             </p>
-            <a href="portfolio/" class="btn" style="margin-right: 20px;">VIEW PORTFOLIO</a>
-            <a href="portfolio/tshirt-designs/" class="btn" style="background: var(--primary-black); 
-               border: 3px solid var(--accent-white); color: var(--accent-white);">T-SHIRT DESIGNS</a>
+            <a href="portfolio/" class="btn">VIEW PORTFOLIO</a>
         </div>
     </div>
 
@@ -363,136 +404,216 @@
             }
         }
 
-        /* Auto-Rotating Showcase Gallery */
-        .showcase-gallery {
+        /* Card Stack Carousel - Silky Smooth */
+        .carousel-wrapper {
             position: relative;
             width: 100%;
-            max-width: 1200px;
+            max-width: 700px;
+            height: 500px;
             margin: 0 auto;
-            height: 600px;
-            perspective: 1000px;
-        }
-
-        .showcase-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
 
-        .showcase-item {
+        .carousel-track {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: translateZ(0);
+            perspective: 1000px;
+        }
+
+        .carousel-slide {
             position: absolute;
-            width: 500px;
-            height: 500px;
-            background: var(--secondary-black);
-            border: 3px solid var(--border-gray);
-            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            height: 450px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                        opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        /* Active card - front and center */
+        .carousel-slide.position-0 {
+            transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1) rotateY(0deg);
+            opacity: 1;
+            z-index: 30;
+        }
+
+        /* First card behind - stacked right */
+        .carousel-slide.position-1 {
+            transform: translate(-50%, -50%) translate3d(30px, 15px, -50px) scale(0.94) rotateY(-5deg);
+            opacity: 0.7;
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        /* Second card behind - more stacked */
+        .carousel-slide.position-2 {
+            transform: translate(-50%, -50%) translate3d(60px, 30px, -100px) scale(0.88) rotateY(-10deg);
+            opacity: 0.4;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        /* Cards exiting to the left */
+        .carousel-slide.position-exit {
+            transform: translate(-50%, -50%) translate3d(-120%, -20px, -150px) scale(0.85) rotateY(15deg);
             opacity: 0;
-            transform: scale(0.8) translateY(50px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* Cards entering from the right */
+        .carousel-slide.position-enter {
+            transform: translate(-50%, -50%) translate3d(120%, 40px, -150px) scale(0.82) rotateY(-15deg);
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .carousel-card {
+            background: var(--secondary-black);
+            border: 2px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 40px;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+            transform: translateZ(0);
         }
 
-        .showcase-item.active {
-            opacity: 1;
-            transform: scale(1) translateY(0);
+        .carousel-slide.position-0 .carousel-card {
             border-color: var(--accent-white);
-            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.15);
-            z-index: 10;
+            box-shadow: 0 12px 40px rgba(255, 255, 255, 0.15);
         }
 
-        .showcase-item.prev {
-            opacity: 0.3;
-            transform: scale(0.85) translateX(-400px) translateY(30px);
-            z-index: 5;
-        }
-
-        .showcase-item.next {
-            opacity: 0.3;
-            transform: scale(0.85) translateX(400px) translateY(30px);
-            z-index: 5;
-        }
-
-        .showcase-item img {
-            max-width: 90%;
-            max-height: 70%;
+        .carousel-card img {
+            width: 100%;
+            max-width: 450px;
+            height: 280px;
             object-fit: contain;
-            margin-bottom: 20px;
-            filter: grayscale(100%);
-            transition: filter 0.5s ease;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            transform: translateZ(0);
         }
 
-        .showcase-item.active img {
-            filter: grayscale(0%);
-        }
-
-        .showcase-caption {
+        .carousel-info {
             text-align: center;
-            margin-top: auto;
+            width: 100%;
         }
 
-        .showcase-caption h3 {
+        .carousel-info h3 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
+            font-size: 2.2rem;
             letter-spacing: 2px;
             color: var(--accent-white);
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
-        .showcase-caption p {
+        .carousel-info p {
             color: var(--text-muted);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            letter-spacing: 1px;
+        }
+
+        /* Hide dots */
+        .carousel-dots {
+            display: none;
         }
 
         /* Responsive adjustments */
         @media (max-width: 1024px) {
-            .showcase-gallery {
-                height: 500px;
+            .carousel-wrapper {
+                max-width: 600px;
+                height: 450px;
             }
-            
-            .showcase-item {
-                width: 400px;
+
+            .carousel-slide {
+                max-width: 520px;
                 height: 400px;
             }
-
-            .showcase-item.prev,
-            .showcase-item.next {
-                transform: scale(0.7) translateY(50px);
-                opacity: 0.2;
+            
+            .carousel-card {
+                padding: 30px;
+            }
+            
+            .carousel-card img {
+                height: 240px;
+                max-width: 380px;
+            }
+            
+            .carousel-info h3 {
+                font-size: 1.9rem;
             }
 
-            .showcase-item.prev {
-                transform: scale(0.7) translateX(-300px) translateY(50px);
+            .carousel-slide.position-1 {
+                transform: translate(-50%, -50%) translate3d(25px, 12px, -50px) scale(0.95) rotateY(-4deg);
             }
 
-            .showcase-item.next {
-                transform: scale(0.7) translateX(300px) translateY(50px);
+            .carousel-slide.position-2 {
+                transform: translate(-50%, -50%) translate3d(50px, 24px, -100px) scale(0.90) rotateY(-8deg);
             }
         }
 
         @media (max-width: 768px) {
-            .showcase-gallery {
-                height: 450px;
+            .carousel-wrapper {
+                max-width: 100%;
+                height: 420px;
+                padding: 0 20px;
             }
 
-            .showcase-item {
-                width: 320px;
-                height: 400px;
+            .carousel-slide {
+                max-width: 100%;
+                height: 380px;
+                transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                            opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
 
-            .showcase-item.prev,
-            .showcase-item.next {
-                opacity: 0;
-                transform: scale(0.5);
+            .carousel-card {
+                padding: 25px;
             }
 
-            .showcase-caption h3 {
-                font-size: 1.5rem;
+            .carousel-card img {
+                height: 220px;
+                max-width: 320px;
+            }
+
+            .carousel-info h3 {
+                font-size: 1.6rem;
+            }
+
+            .carousel-info p {
+                font-size: 1rem;
+            }
+
+            .carousel-slide.position-1 {
+                transform: translate(-50%, -50%) translate3d(20px, 10px, -30px) scale(0.94) rotateY(-3deg);
+            }
+
+            .carousel-slide.position-2 {
+                transform: translate(-50%, -50%) translate3d(40px, 20px, -60px) scale(0.88) rotateY(-6deg);
+            }
+
+            .carousel-slide.position-exit {
+                transform: translate(-50%, -50%) translate3d(-100%, -15px, -90px) scale(0.85) rotateY(10deg);
+            }
+
+            .carousel-slide.position-enter {
+                transform: translate(-50%, -50%) translate3d(100%, 30px, -90px) scale(0.82) rotateY(-10deg);
             }
         }
 
@@ -527,70 +648,127 @@
     </style>
 
     <script>
-        // Auto-Rotating Showcase Gallery
-        class ShowcaseGallery {
+        // Card Stack Carousel - Enhanced Shifting
+        class Carousel {
             constructor() {
-                this.items = document.querySelectorAll('.showcase-item');
+                this.slides = Array.from(document.querySelectorAll('.carousel-slide'));
                 this.currentIndex = 0;
-                this.autoRotateInterval = null;
+                this.totalSlides = this.slides.length;
+                this.autoplayInterval = null;
+                
+                if (this.totalSlides === 0) return;
+                
                 this.init();
             }
 
             init() {
-                if (this.items.length === 0) return;
+                // Set initial positions
+                this.updatePositions();
                 
-                this.updateGallery();
-                this.startAutoRotate();
-
-                // Removed pause on hover - now always rotates!
+                // Start autoplay
+                this.startAutoplay();
             }
 
-            updateGallery() {
-                this.items.forEach((item, index) => {
-                    item.classList.remove('active', 'prev', 'next');
+            updatePositions() {
+                this.slides.forEach((slide, index) => {
+                    // Calculate relative position
+                    let relativePos = (index - this.currentIndex + this.totalSlides) % this.totalSlides;
                     
-                    if (index === this.currentIndex) {
-                        item.classList.add('active');
-                    } else if (index === this.getPrevIndex()) {
-                        item.classList.add('prev');
-                    } else if (index === this.getNextIndex()) {
-                        item.classList.add('next');
+                    // Remove all position classes
+                    slide.className = 'carousel-slide';
+                    
+                    // Assign position class with more states
+                    if (relativePos === 0) {
+                        slide.classList.add('position-0'); // Active center
+                    } else if (relativePos === 1) {
+                        slide.classList.add('position-1'); // First behind
+                    } else if (relativePos === 2) {
+                        slide.classList.add('position-2'); // Second behind
+                    } else if (relativePos === this.totalSlides - 1) {
+                        slide.classList.add('position-exit'); // Exiting to left
+                    } else {
+                        slide.classList.add('position-enter'); // Entering from right
                     }
                 });
             }
 
-            getPrevIndex() {
-                return this.currentIndex === 0 ? this.items.length - 1 : this.currentIndex - 1;
-            }
-
-            getNextIndex() {
-                return this.currentIndex === this.items.length - 1 ? 0 : this.currentIndex + 1;
-            }
-
             next() {
-                this.currentIndex = this.getNextIndex();
-                this.updateGallery();
+                this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
+                this.updatePositions();
             }
 
-            startAutoRotate() {
-                this.stopAutoRotate();
-                this.autoRotateInterval = setInterval(() => this.next(), 2500); // Change every 2.5 seconds
+            startAutoplay() {
+                this.autoplayInterval = setInterval(() => this.next(), 3500);
             }
 
-            stopAutoRotate() {
-                if (this.autoRotateInterval) {
-                    clearInterval(this.autoRotateInterval);
-                    this.autoRotateInterval = null;
+            stopAutoplay() {
+                if (this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                    this.autoplayInterval = null;
                 }
             }
         }
 
-        // Initialize gallery when DOM is ready
+                // Initialize
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => new ShowcaseGallery());
+            document.addEventListener('DOMContentLoaded', () => new Carousel());
         } else {
-            new ShowcaseGallery();
+            new Carousel();
         }
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            const formData = new FormData(this);
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'SENDING...';
+            formMessage.style.display = 'none';
+            
+            try {
+                const response = await fetch('contact-handler.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Success message
+                    formMessage.textContent = data.message;
+                    formMessage.style.background = 'rgba(0, 255, 0, 0.1)';
+                    formMessage.style.border = '2px solid #00ff00';
+                    formMessage.style.color = '#00ff00';
+                    formMessage.style.display = 'block';
+                    
+                    // Reset form
+                    document.getElementById('contactForm').reset();
+                } else {
+                    // Error message
+                    formMessage.textContent = data.errors.join(', ');
+                    formMessage.style.background = 'rgba(255, 0, 0, 0.1)';
+                    formMessage.style.border = '2px solid #ff0000';
+                    formMessage.style.color = '#ff0000';
+                    formMessage.style.display = 'block';
+                }
+            } catch (error) {
+                // Network error
+                formMessage.textContent = 'Error sending message. Please try emailing directly.';
+                formMessage.style.background = 'rgba(255, 0, 0, 0.1)';
+                formMessage.style.border = '2px solid #ff0000';
+                formMessage.style.color = '#ff0000';
+                formMessage.style.display = 'block';
+            }
+            
+            // Re-enable button
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'SEND MESSAGE';
+        });
     </script>
 </body>
 </html>
+```

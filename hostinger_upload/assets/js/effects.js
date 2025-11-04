@@ -111,18 +111,26 @@ class ParticlesBackground {
 class FlowingMenu {
     constructor() {
         this.nav = document.querySelector('nav ul');
-        this.links = document.querySelectorAll('nav ul li a');
+        this.links = Array.from(document.querySelectorAll('nav ul li a'));
         this.indicator = null;
+        
+        if (!this.nav || this.links.length === 0) {
+            console.warn('FlowingMenu: Nav or links not found');
+            return;
+        }
+        
         this.init();
     }
 
     init() {
-        if (!this.nav || this.links.length === 0) return;
-
         // Create flowing indicator
         this.indicator = document.createElement('div');
         this.indicator.className = 'nav-indicator';
+        this.indicator.style.width = '0px';
+        this.indicator.style.opacity = '1';
         this.nav.appendChild(this.indicator);
+        
+        console.log('FlowingMenu: Indicator created and appended');
 
         // Track active link
         this.links.forEach((link, index) => {
@@ -135,22 +143,35 @@ class FlowingMenu {
         // Set initial position
         const activeLink = document.querySelector('nav ul li a.active') || this.links[0];
         if (activeLink) {
-            this.setActive(activeLink);
+            // Small delay to ensure nav is fully rendered
+            setTimeout(() => {
+                this.setActive(activeLink);
+                console.log('FlowingMenu: Initial position set');
+            }, 50);
         }
 
         // Handle mouse leave
         this.nav.addEventListener('mouseleave', () => {
             const activeLink = document.querySelector('nav ul li a.active') || this.links[0];
-            this.moveIndicator(activeLink);
+            if (activeLink) {
+                this.moveIndicator(activeLink);
+            }
         });
     }
 
     moveIndicator(link) {
+        if (!this.indicator || !link) return;
+        
         const linkRect = link.getBoundingClientRect();
         const navRect = this.nav.getBoundingClientRect();
         
-        this.indicator.style.width = `${linkRect.width}px`;
-        this.indicator.style.left = `${linkRect.left - navRect.left}px`;
+        const width = linkRect.width;
+        const left = linkRect.left - navRect.left;
+        
+        this.indicator.style.width = `${width}px`;
+        this.indicator.style.left = `${left}px`;
+        
+        console.log(`FlowingMenu: Moved to ${left}px, width ${width}px`);
     }
 
     setActive(link) {
@@ -163,48 +184,16 @@ class FlowingMenu {
 // ======================
 // 3. INFINITE SCROLL (Skills)
 // ======================
+// NOTE: Skills now use pure CSS animation - no JavaScript needed!
+// See styles.css for .skills-container and @keyframes scroll
 class InfiniteScroll {
     constructor(selector, speed = 1) {
-        this.container = document.querySelector(selector);
-        this.speed = speed;
-        this.init();
+        console.log('InfiniteScroll: Now using pure CSS animation - JavaScript not needed');
+        // Keeping this class for backwards compatibility but it does nothing now
     }
 
     init() {
-        if (!this.container) return;
-
-        // Wrap content in scroller
-        const content = this.container.innerHTML;
-        this.container.innerHTML = `
-            <div class="scroll-wrapper">
-                <div class="scroll-content">${content}${content}</div>
-            </div>
-        `;
-
-        const scrollContent = this.container.querySelector('.scroll-content');
-        let position = 0;
-
-        const animate = () => {
-            position -= this.speed;
-            const contentWidth = scrollContent.offsetWidth / 2;
-            
-            if (Math.abs(position) >= contentWidth) {
-                position = 0;
-            }
-            
-            scrollContent.style.transform = `translateX(${position}px)`;
-            requestAnimationFrame(animate);
-        };
-
-        animate();
-
-        // Pause on hover
-        this.container.addEventListener('mouseenter', () => {
-            scrollContent.style.animationPlayState = 'paused';
-        });
-        this.container.addEventListener('mouseleave', () => {
-            scrollContent.style.animationPlayState = 'running';
-        });
+        // CSS handles everything now!
     }
 }
 
@@ -244,21 +233,51 @@ class ScrollReveal {
 // ======================
 // INITIALIZE ALL EFFECTS
 // ======================
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize particles background
-    new ParticlesBackground();
-
-    // Initialize flowing menu
-    new FlowingMenu();
-
-    // Initialize infinite scroll for skills (if exists)
-    const skillsContainer = document.querySelector('.skills-container');
-    if (skillsContainer) {
-        new InfiniteScroll('.skills-container', 0.5);
+function initializeEffects() {
+    try {
+        // Initialize particles background
+        new ParticlesBackground();
+        console.log('✅ Particles initialized');
+    } catch (e) {
+        console.error('❌ Particles failed:', e);
     }
 
-    // Initialize scroll reveal
-    new ScrollReveal();
+    try {
+        // Initialize flowing menu
+        new FlowingMenu();
+        console.log('✅ Flowing menu initialized');
+    } catch (e) {
+        console.error('❌ Flowing menu failed:', e);
+    }
+
+    try {
+        // Initialize infinite scroll for skills (if exists)
+        const skillsContainer = document.querySelector('.skills-container');
+        if (skillsContainer) {
+            new InfiniteScroll('.skills-container', 0.5);
+            console.log('✅ Infinite scroll initialized');
+        }
+    } catch (e) {
+        console.error('❌ Infinite scroll failed:', e);
+    }
+
+    try {
+        // Initialize scroll reveal
+        new ScrollReveal();
+        console.log('✅ Scroll reveal initialized');
+    } catch (e) {
+        console.error('❌ Scroll reveal failed:', e);
+    }
 
     console.log('✨ All effects loaded!');
-});
+}
+
+// Multiple initialization attempts to ensure loading
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeEffects);
+} else {
+    initializeEffects();
+}
+
+// Fallback: try again after a short delay
+setTimeout(initializeEffects, 100);
