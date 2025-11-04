@@ -3,42 +3,48 @@
 $pageTitle = "T-Shirt Designs Portfolio";
 
 // Design data - Add your designs here!
-// Replace these placeholder examples with your actual designs
 $designs = [
     [
         'id' => 1,
-        'title' => 'Example Design 1',
-        'description' => 'This is a placeholder - replace with your actual t-shirt design',
-        'year' => '2023',
-        'thumbnail' => 'images/thumbnails/placeholder.svg',
-        'full' => 'images/full/placeholder.svg'
+        'title' => 'Southern Gents Design 1',
+        'description' => 'Custom t-shirt design for Pi Kappa Phi - Southern Gents collection',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/SouthernGents-01.svg',
+        'full' => 'images/full/SouthernGents-01.svg'
     ],
     [
         'id' => 2,
-        'title' => 'Example Design 2',
-        'description' => 'This is a placeholder - replace with your actual t-shirt design',
+        'title' => 'Southern Gents Design 2',
+        'description' => 'Custom t-shirt design for Pi Kappa Phi - Southern Gents collection',
         'year' => '2024',
-        'thumbnail' => 'images/thumbnails/placeholder.svg',
-        'full' => 'images/full/placeholder.svg'
+        'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-02.svg',
+        'full' => 'images/full/SouthernGents_Artboard 1-02.svg'
     ],
     [
         'id' => 3,
-        'title' => 'Example Design 3',
-        'description' => 'This is a placeholder - replace with your actual t-shirt design',
+        'title' => 'Southern Gents Design 3',
+        'description' => 'Custom t-shirt design for Pi Kappa Phi - Southern Gents collection',
         'year' => '2024',
-        'thumbnail' => 'images/thumbnails/placeholder.svg',
-        'full' => 'images/full/placeholder.svg'
+        'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-03.svg',
+        'full' => 'images/full/SouthernGents_Artboard 1-03.svg'
+    ],
+    [
+        'id' => 4,
+        'title' => 'Southern Gents Design 4',
+        'description' => 'Custom t-shirt design for Pi Kappa Phi - Southern Gents collection',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-04.svg',
+        'full' => 'images/full/SouthernGents_Artboard 1-04.svg'
+    ],
+    [
+        'id' => 5,
+        'title' => 'Southern Gents Design 5',
+        'description' => 'Custom t-shirt design for Pi Kappa Phi - Southern Gents collection',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-05.svg',
+        'full' => 'images/full/SouthernGents_Artboard 1-05.svg'
     ],
     // Add more designs here as you upload them
-    // Example format:
-    // [
-    //     'id' => 4,
-    //     'title' => 'Dragon Warrior Tee',
-    //     'description' => 'Epic dragon design with flames and medieval styling',
-    //     'year' => '2025',
-    //     'thumbnail' => 'images/thumbnails/dragon-warrior.png',
-    //     'full' => 'images/full/dragon-warrior.png'
-    // ],
 ];
 
 // Get unique years for filtering
@@ -52,7 +58,7 @@ sort($years);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?> - Jake Barton</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="animated-bg"></div>
@@ -69,10 +75,10 @@ sort($years);
     </header>
 
     <div class="container">
-        <div class="content-section" style="text-align: center; padding: 60px;">
-            <h1><?php echo $pageTitle; ?></h1>
-            <p style="font-size: 1.2rem; color: var(--text-muted); margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                A showcase of custom t-shirt designs I've created as <strong style="color: var(--accent-blue);">T-Shirt Chair</strong> 
+        <div class="content-section" style="text-align: center; padding: 80px;">
+            <h1 style="font-size: 4.5rem;"><?php echo strtoupper($pageTitle); ?></h1>
+            <p style="font-size: 1.2rem; color: var(--text-muted); margin-top: 25px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                A showcase of custom t-shirt designs I've created as <strong style="color: var(--accent-white); font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px;">T-SHIRT CHAIR</strong> 
                 for Pi Kappa Phi Fraternity - Alpha Eta Chapter over the past two years.
             </p>
         </div>

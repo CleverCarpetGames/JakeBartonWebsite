@@ -135,7 +135,33 @@ class GalleryManager {
         if (newIndex >= visibleDesigns.length) newIndex = 0;
         
         this.currentIndex = this.designs.indexOf(visibleDesigns[newIndex]);
-        this.updateModal();
+        this.updateModalWithAnimation();
+    }
+
+    updateModalWithAnimation() {
+        const modalImg = document.getElementById('modalImage');
+        const modalInfo = document.querySelector('.modal-info');
+        
+        // Add fade-out class to both image and info
+        modalImg.classList.add('fade-out');
+        if (modalInfo) modalInfo.classList.add('fade-out');
+        
+        // Wait for fade-out, then update and fade-in
+        setTimeout(() => {
+            this.updateModal();
+            modalImg.classList.remove('fade-out');
+            modalImg.classList.add('fade-in');
+            if (modalInfo) {
+                modalInfo.classList.remove('fade-out');
+                modalInfo.classList.add('fade-in');
+            }
+            
+            // Remove fade-in class after animation completes
+            setTimeout(() => {
+                modalImg.classList.remove('fade-in');
+                if (modalInfo) modalInfo.classList.remove('fade-in');
+            }, 400);
+        }, 150);
     }
 
     updateModal() {
