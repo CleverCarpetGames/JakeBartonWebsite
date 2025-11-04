@@ -1,0 +1,49 @@
+# Original Adobe Illustrator files (keep these backed up separately)
+*.ai
+*.eps
+*.psd
+
+# Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+*.swp
+*.swo
+*~
+
+# PHP
+vendor/
+composer.phar
+composer.lock
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
