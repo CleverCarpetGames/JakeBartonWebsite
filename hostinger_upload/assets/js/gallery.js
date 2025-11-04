@@ -89,12 +89,16 @@ class GalleryManager {
         const filterBtns = document.querySelectorAll('.filter-btn');
         filterBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
+                // Get the button element (might be the span child)
+                const button = e.target.closest('.filter-btn');
+                if (!button) return;
+                
                 // Remove active class from all buttons
                 filterBtns.forEach(b => b.classList.remove('active'));
                 // Add active class to clicked button
-                e.target.classList.add('active');
+                button.classList.add('active');
                 
-                const filter = e.target.dataset.filter;
+                const filter = button.dataset.filter;
                 this.filterGallery(filter);
             });
         });
@@ -102,7 +106,10 @@ class GalleryManager {
 
     filterGallery(filter) {
         this.designs.forEach(item => {
-            if (filter === 'all' || item.dataset.year === filter) {
+            const year = item.dataset.year;
+            const category = item.dataset.category;
+            
+            if (filter === 'all' || year === filter || category === filter) {
                 item.style.display = 'block';
             } else {
                 item.style.display = 'none';
@@ -170,12 +177,13 @@ class GalleryManager {
         const title = design.dataset.title;
         const description = design.dataset.description;
         const year = design.dataset.year;
+        const fullPath = design.dataset.full;
 
         // Update modal image
         const modalImg = document.getElementById('modalImage');
         if (modalImg && img) {
-            // Use full-size image instead of thumbnail
-            const fullImageSrc = img.src.replace('/thumbnails/', '/full/');
+            // Use data-full attribute if available, otherwise replace thumbnails with full
+            const fullImageSrc = fullPath || img.src.replace('/thumbnails/', '/full/');
             modalImg.src = fullImageSrc;
             modalImg.alt = title;
         }

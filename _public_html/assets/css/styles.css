@@ -663,3 +663,99 @@ p {
 html {
     scroll-behavior: smooth;
 }
+
+/* ======================
+   FLOWING MENU INDICATOR
+   ====================== */
+.nav-indicator {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    background: var(--accent-white);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+nav ul {
+    position: relative;
+}
+
+nav ul li a {
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-white);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* ======================
+   INFINITE SCROLL CONTAINER
+   ====================== */
+.scroll-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.scroll-content {
+    display: flex;
+    gap: 15px;
+    width: fit-content;
+}
+
+.skills-container {
+    overflow: visible !important;
+    display: block !important;
+}
+
+.skills-container .scroll-content {
+    animation: infiniteScroll 30s linear infinite;
+}
+
+@keyframes infiniteScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ======================
+   SCROLL REVEAL ANIMATIONS
+   ====================== */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animation for multiple items */
+.reveal-item:nth-child(1) { transition-delay: 0s; }
+.reveal-item:nth-child(2) { transition-delay: 0.1s; }
+.reveal-item:nth-child(3) { transition-delay: 0.2s; }
+.reveal-item:nth-child(4) { transition-delay: 0.3s; }
+.reveal-item:nth-child(5) { transition-delay: 0.4s; }
+.reveal-item:nth-child(6) { transition-delay: 0.5s; }
+
+/* ======================
+   PARTICLES CANVAS
+   ====================== */
+#particles-canvas {
+    opacity: 0.4;
+}
+
+/* ======================
+   ENHANCED BACKGROUNDS
+   ====================== */
+.animated-bg {
+    background: radial-gradient(ellipse at top, #0a0a0a 0%, #000000 100%);
+}
+

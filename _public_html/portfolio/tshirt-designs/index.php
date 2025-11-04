@@ -4,45 +4,112 @@ $pageTitle = "T-Shirt Designs Portfolio";
 
 // Design data - Add your designs here!
 $designs = [
+    // 2025 Designs
     [
         'id' => 1,
-        'title' => 'Southern Gents Design 1',
-        'description' => 'Custom t-shirt design for Pi Kappa Phi - Southern Gents collection',
-        'year' => '2024',
-        'thumbnail' => 'images/thumbnails/SouthernGents-01.svg',
-        'full' => 'images/full/SouthernGents-01.svg'
+        'title' => 'Fall Recruitment 2025 - Design 1',
+        'description' => 'Custom recruitment t-shirt design for Pi Kappa Phi Fall 2025',
+        'year' => '2025',
+        'thumbnail' => 'images/thumbnails/Fall Recruitment \'25-01.svg',
+        'full' => 'images/full/Fall Recruitment \'25-01.svg'
     ],
     [
         'id' => 2,
-        'title' => 'Southern Gents Design 2',
-        'description' => 'Custom t-shirt design for Pi Kappa Phi - Southern Gents collection',
-        'year' => '2024',
-        'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-02.svg',
-        'full' => 'images/full/SouthernGents_Artboard 1-02.svg'
+        'title' => 'Fall Recruitment 2025 - Design 2',
+        'description' => 'Custom recruitment t-shirt design for Pi Kappa Phi Fall 2025',
+        'year' => '2025',
+        'thumbnail' => 'images/thumbnails/Fall Recruitment \'25-02.svg',
+        'full' => 'images/full/Fall Recruitment \'25-02.svg'
     ],
     [
         'id' => 3,
-        'title' => 'Southern Gents Design 3',
-        'description' => 'Custom t-shirt design for Pi Kappa Phi - Southern Gents collection',
-        'year' => '2024',
-        'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-03.svg',
-        'full' => 'images/full/SouthernGents_Artboard 1-03.svg'
+        'title' => 'Barn Bash 2025',
+        'description' => 'Custom event t-shirt design for Barn Bash 2025',
+        'year' => '2025',
+        'thumbnail' => 'images/thumbnails/Barn Bash 2025.svg',
+        'full' => 'images/full/Barn Bash 2025.svg'
     ],
+    
+    // 2024 Designs
     [
         'id' => 4,
-        'title' => 'Southern Gents Design 4',
-        'description' => 'Custom t-shirt design for Pi Kappa Phi - Southern Gents collection',
+        'title' => 'Southern Gents - Design 1',
+        'description' => 'Custom t-shirt design based on album cover - Southern Gents collection',
         'year' => '2024',
-        'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-04.svg',
-        'full' => 'images/full/SouthernGents_Artboard 1-04.svg'
+        'thumbnail' => 'images/thumbnails/SouthernGents-01.svg',
+        'full' => 'images/full/SouthernGents/SouthernGents-01.svg'
     ],
     [
         'id' => 5,
-        'title' => 'Southern Gents Design 5',
-        'description' => 'Custom t-shirt design for Pi Kappa Phi - Southern Gents collection',
+        'title' => 'Southern Gents - Design 2',
+        'description' => 'Custom t-shirt design based on album cover - Southern Gents collection',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-02.svg',
+        'full' => 'images/full/SouthernGents/SouthernGents_Artboard 1-02.svg'
+    ],
+    [
+        'id' => 6,
+        'title' => 'Southern Gents - Design 3',
+        'description' => 'Custom t-shirt design based on album cover - Southern Gents collection',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-03.svg',
+        'full' => 'images/full/SouthernGents/SouthernGents_Artboard 1-03.svg'
+    ],
+    [
+        'id' => 7,
+        'title' => 'Southern Gents - Design 4',
+        'description' => 'Custom t-shirt design based on album cover - Southern Gents collection',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-04.svg',
+        'full' => 'images/full/SouthernGents/SouthernGents_Artboard 1-04.svg'
+    ],
+    [
+        'id' => 8,
+        'title' => 'Southern Gents - Design 5',
+        'description' => 'Custom t-shirt design based on album cover - Southern Gents collection',
         'year' => '2024',
         'thumbnail' => 'images/thumbnails/SouthernGents_Artboard 1-05.svg',
-        'full' => 'images/full/SouthernGents_Artboard 1-05.svg'
+        'full' => 'images/full/SouthernGents/SouthernGents_Artboard 1-05.svg'
+    ],
+    [
+        'id' => 9,
+        'title' => 'Southern Gents 2024',
+        'description' => 'Custom t-shirt design based on album cover - Southern Gents collection',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/Southern Gents 2024.svg',
+        'full' => 'images/full/SouthernGents/Southern Gents 2024.svg'
+    ],
+    [
+        'id' => 10,
+        'title' => 'Barn Bash 2024',
+        'description' => 'Custom event t-shirt design for Barn Bash 2024',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/Barn Bash 2024.svg',
+        'full' => 'images/full/Barn Bash 2024.svg'
+    ],
+    [
+        'id' => 11,
+        'title' => 'Caribbean Party',
+        'description' => 'Custom event t-shirt design for Caribbean themed party',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/Caribbean Party.svg',
+        'full' => 'images/full/Caribbean Party.svg'
+    ],
+    [
+        'id' => 12,
+        'title' => 'Rose Ball',
+        'description' => 'Custom formal event t-shirt design for Rose Ball',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/Rose Ball.svg',
+        'full' => 'images/full/RoseBall/Rose Ball.svg'
+    ],
+    [
+        'id' => 13,
+        'title' => 'PGA Polo',
+        'description' => 'Custom polo shirt design for Pi Kappa Phi',
+        'year' => '2024',
+        'thumbnail' => 'images/thumbnails/PGA Polo.svg',
+        'full' => 'images/full/PGA Polo.svg'
     ],
     // Add more designs here as you upload them
 ];
@@ -98,7 +165,8 @@ sort($years);
                     <div class="gallery-item" 
                          data-title="<?php echo htmlspecialchars($design['title']); ?>"
                          data-description="<?php echo htmlspecialchars($design['description']); ?>"
-                         data-year="<?php echo $design['year']; ?>">
+                         data-year="<?php echo $design['year']; ?>"
+                         data-full="<?php echo $design['full']; ?>">
                         <img src="<?php echo $design['thumbnail']; ?>" 
                              alt="<?php echo htmlspecialchars($design['title']); ?>"
                              loading="lazy">

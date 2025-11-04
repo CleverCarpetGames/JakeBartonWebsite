@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <script src="assets/js/effects.js" defer></script>
 </head>
 <body>
     <!-- Animated Background -->
@@ -68,6 +69,77 @@
                 <?php echo $year; ?> at <?php echo $university; ?>, <?php echo $location; ?>
             </p>
             <a href="portfolio/" class="btn" style="animation: fadeInUp 1.4s ease-out;">VIEW MY WORK</a>
+        </div>
+
+        <!-- Auto-Rotating Showcase Gallery -->
+        <div class="content-section" style="padding: 60px 0; overflow: hidden;">
+            <h2 style="text-align: center; margin-bottom: 50px;">FEATURED WORK</h2>
+            
+            <div class="showcase-gallery">
+                <div class="showcase-container">
+                    <!-- T-Shirt Designs -->
+                    <div class="showcase-item">
+                        <img src="portfolio/tshirt-designs/images/thumbnails/Fall Recruitment '25-01.svg" alt="Fall Recruitment 2025">
+                        <div class="showcase-caption">
+                            <h3>Fall Recruitment 2025</h3>
+                            <p>T-Shirt Design</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="portfolio/professional-works/33-miles-graphics/images/thumbnails/33-miles-01-grain-striped.png" alt="33Miles Graphics">
+                        <div class="showcase-caption">
+                            <h3>33Miles Band Graphics</h3>
+                            <p>Professional Client Work</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="portfolio/tshirt-designs/images/thumbnails/SouthernGents-01.svg" alt="Southern Gents Design">
+                        <div class="showcase-caption">
+                            <h3>Southern Gents</h3>
+                            <p>Album-Inspired T-Shirt</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="portfolio/professional-works/33-miles-graphics/images/thumbnails/33-miles-regular-01.png" alt="33Miles Clean Design">
+                        <div class="showcase-caption">
+                            <h3>33Miles Social Media</h3>
+                            <p>Event Advertisement</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="portfolio/tshirt-designs/images/thumbnails/Barn Bash 2025.svg" alt="Barn Bash 2025">
+                        <div class="showcase-caption">
+                            <h3>Barn Bash 2025</h3>
+                            <p>Event T-Shirt Design</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="portfolio/professional-works/33-miles-graphics/images/thumbnails/33-miles-05-grain-regular.png" alt="33Miles Grainy Design">
+                        <div class="showcase-caption">
+                            <h3>33Miles Grainy Style</h3>
+                            <p>Textured Graphics</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="portfolio/tshirt-designs/images/thumbnails/Caribbean Party.svg" alt="Caribbean Party Design">
+                        <div class="showcase-caption">
+                            <h3>Caribbean Party</h3>
+                            <p>Themed Event Design</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="portfolio/tshirt-designs/images/thumbnails/Rose Ball.svg" alt="Rose Ball Design">
+                        <div class="showcase-caption">
+                            <h3>Rose Ball</h3>
+                            <p>Formal Event Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="portfolio/" class="btn">EXPLORE FULL PORTFOLIO</a>
+            </div>
         </div>
         
         <!-- About Section -->
@@ -291,6 +363,139 @@
             }
         }
 
+        /* Auto-Rotating Showcase Gallery */
+        .showcase-gallery {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 600px;
+            perspective: 1000px;
+        }
+
+        .showcase-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .showcase-item {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: var(--secondary-black);
+            border: 3px solid var(--border-gray);
+            padding: 20px;
+            opacity: 0;
+            transform: scale(0.8) translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .showcase-item.active {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            border-color: var(--accent-white);
+            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.15);
+            z-index: 10;
+        }
+
+        .showcase-item.prev {
+            opacity: 0.3;
+            transform: scale(0.85) translateX(-400px) translateY(30px);
+            z-index: 5;
+        }
+
+        .showcase-item.next {
+            opacity: 0.3;
+            transform: scale(0.85) translateX(400px) translateY(30px);
+            z-index: 5;
+        }
+
+        .showcase-item img {
+            max-width: 90%;
+            max-height: 70%;
+            object-fit: contain;
+            margin-bottom: 20px;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+
+        .showcase-item.active img {
+            filter: grayscale(0%);
+        }
+
+        .showcase-caption {
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .showcase-caption h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: var(--accent-white);
+            margin-bottom: 5px;
+        }
+
+        .showcase-caption p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .showcase-gallery {
+                height: 500px;
+            }
+            
+            .showcase-item {
+                width: 400px;
+                height: 400px;
+            }
+
+            .showcase-item.prev,
+            .showcase-item.next {
+                transform: scale(0.7) translateY(50px);
+                opacity: 0.2;
+            }
+
+            .showcase-item.prev {
+                transform: scale(0.7) translateX(-300px) translateY(50px);
+            }
+
+            .showcase-item.next {
+                transform: scale(0.7) translateX(300px) translateY(50px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .showcase-gallery {
+                height: 450px;
+            }
+
+            .showcase-item {
+                width: 320px;
+                height: 400px;
+            }
+
+            .showcase-item.prev,
+            .showcase-item.next {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            .showcase-caption h3 {
+                font-size: 1.5rem;
+            }
+        }
+
         /* Contact Form Styles */
         input:focus, textarea:focus {
             outline: none;
@@ -320,5 +525,72 @@
             }
         }
     </style>
+
+    <script>
+        // Auto-Rotating Showcase Gallery
+        class ShowcaseGallery {
+            constructor() {
+                this.items = document.querySelectorAll('.showcase-item');
+                this.currentIndex = 0;
+                this.autoRotateInterval = null;
+                this.init();
+            }
+
+            init() {
+                if (this.items.length === 0) return;
+                
+                this.updateGallery();
+                this.startAutoRotate();
+
+                // Removed pause on hover - now always rotates!
+            }
+
+            updateGallery() {
+                this.items.forEach((item, index) => {
+                    item.classList.remove('active', 'prev', 'next');
+                    
+                    if (index === this.currentIndex) {
+                        item.classList.add('active');
+                    } else if (index === this.getPrevIndex()) {
+                        item.classList.add('prev');
+                    } else if (index === this.getNextIndex()) {
+                        item.classList.add('next');
+                    }
+                });
+            }
+
+            getPrevIndex() {
+                return this.currentIndex === 0 ? this.items.length - 1 : this.currentIndex - 1;
+            }
+
+            getNextIndex() {
+                return this.currentIndex === this.items.length - 1 ? 0 : this.currentIndex + 1;
+            }
+
+            next() {
+                this.currentIndex = this.getNextIndex();
+                this.updateGallery();
+            }
+
+            startAutoRotate() {
+                this.stopAutoRotate();
+                this.autoRotateInterval = setInterval(() => this.next(), 2500); // Change every 2.5 seconds
+            }
+
+            stopAutoRotate() {
+                if (this.autoRotateInterval) {
+                    clearInterval(this.autoRotateInterval);
+                    this.autoRotateInterval = null;
+                }
+            }
+        }
+
+        // Initialize gallery when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => new ShowcaseGallery());
+        } else {
+            new ShowcaseGallery();
+        }
+    </script>
 </body>
 </html>

@@ -30,6 +30,19 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-top: 40px;">
             
+            <!-- Professional Works Card -->
+            <div class="content-section" style="text-align: center; padding: 60px 40px; transition: all 0.4s ease; cursor: pointer;"
+                 onclick="window.location.href='professional-works/';"
+                 onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 20px 60px rgba(255, 255, 255, 0.15)'; this.style.borderColor='var(--accent-white)';"
+                 onmouseout="this.style.transform=''; this.style.boxShadow=''; this.style.borderColor='var(--border-gray)';">
+                <div style="font-size: 5rem; margin-bottom: 25px; filter: grayscale(100%);">💼</div>
+                <h2 style="color: var(--accent-white); margin-bottom: 20px;">PROFESSIONAL WORKS</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">
+                    Client projects & professional graphic design work
+                </p>
+                <a href="professional-works/" class="btn" onclick="event.stopPropagation();">VIEW PROJECTS</a>
+            </div>
+
             <!-- T-Shirt Designs Card -->
             <div class="content-section" style="text-align: center; padding: 60px 40px; transition: all 0.4s ease; cursor: pointer;"
                  onclick="window.location.href='tshirt-designs/';"
