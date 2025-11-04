@@ -43,14 +43,17 @@
                 <a href="tshirt-designs/" class="btn" onclick="event.stopPropagation();">VIEW GALLERY</a>
             </div>
 
-            <!-- Game Projects Card (Coming Soon) -->
-            <div class="content-section" style="text-align: center; padding: 60px 40px; opacity: 0.5;">
+            <!-- Game Projects Card -->
+            <div class="content-section" style="text-align: center; padding: 60px 40px; transition: all 0.4s ease; cursor: pointer;"
+                 onclick="window.location.href='games/';"
+                 onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 20px 60px rgba(255, 255, 255, 0.15)'; this.style.borderColor='var(--accent-white)';"
+                 onmouseout="this.style.transform=''; this.style.boxShadow=''; this.style.borderColor='var(--border-gray)';">
                 <div style="font-size: 5rem; margin-bottom: 25px; filter: grayscale(100%);">🎮</div>
-                <h2 style="color: var(--text-muted); margin-bottom: 20px;">GAME PROJECTS</h2>
+                <h2 style="color: var(--accent-white); margin-bottom: 20px;">GAME PROJECTS</h2>
                 <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">
                     Interactive experiences built in Unreal, Unity, and Godot
                 </p>
-                <span class="btn" style="opacity: 0.5; cursor: not-allowed; pointer-events: none;">COMING SOON</span>
+                <a href="games/" class="btn" onclick="event.stopPropagation();">PLAY GAMES</a>
             </div>
 
             <!-- 3D Art Card (Coming Soon) -->
