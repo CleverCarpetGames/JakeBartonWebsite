@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jake Barton - Game Designer & 3D Artist</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20251104-2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <script src="assets/js/effects.js" defer></script>
+    <script src="assets/js/effects.js?v=20251104-2" defer></script>
 </head>
 <body>
     <!-- Animated Background -->
@@ -184,14 +184,9 @@
             <h2>TECHNICAL SKILLS & TOOLS</h2>
             <p style="margin-bottom: 30px;">Technologies and software I work with:</p>
             <div class="skills-container">
-                <div class="skills-wrapper">
-                    <?php foreach ($skills as $skill): ?>
-                        <span class="skill-tag"><?php echo $skill; ?></span>
-                    <?php endforeach; ?>
-                    <?php foreach ($skills as $skill): ?>
-                        <span class="skill-tag"><?php echo $skill; ?></span>
-                    <?php endforeach; ?>
-                </div>
+                <?php foreach ($skills as $skill): ?>
+                    <span class="skill-tag"><?php echo $skill; ?></span>
+                <?php endforeach; ?>
             </div>
         </div>
         

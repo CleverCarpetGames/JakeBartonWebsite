@@ -574,52 +574,21 @@ p {
     }
 }
 
-/* Skills/Tags - Simple Infinite Scroll */
+/* Skills/Tags - Static Grid Layout (NO SCROLLING) */
 .skills-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 15px;
     margin: 30px 0;
-    padding: 20px 0;
+    overflow: visible !important;
+    white-space: normal !important;
+    width: 100% !important;
+    position: relative !important;
 }
 
-.skills-container::before,
-.skills-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100px;
-    height: 100%;
-    z-index: 2;
-}
-
-.skills-container::before {
-    left: 0;
-    background: linear-gradient(to right, var(--secondary-black), transparent);
-}
-
-.skills-container::after {
-    right: 0;
-    background: linear-gradient(to left, var(--secondary-black), transparent);
-}
-
+/* Remove any wrapper conflicts */
 .skills-wrapper {
-    display: flex;
-    width: fit-content;
-    animation: scroll 20s linear infinite;
-}
-
-.skills-wrapper:hover {
-    animation-play-state: running; /* Keep scrolling even on hover */
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    display: none !important;
 }
 
 .skill-tag {
@@ -634,9 +603,8 @@ p {
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    white-space: nowrap;
-    margin-right: 15px;
     flex-shrink: 0;
+    display: inline-block;
 }
 
 .skill-tag:hover {
@@ -693,7 +661,7 @@ html {
 }
 
 /* ======================
-   FLOWING MENU INDICATOR
+   NAVIGATION STYLES WITH FLOWING INDICATOR
    ====================== */
 .nav-indicator {
     position: absolute;
@@ -753,4 +721,367 @@ nav ul li a:hover {
 .animated-bg {
     background: radial-gradient(ellipse at top, #0a0a0a 0%, #000000 100%);
 }
+
+/* ======================
+   CAROUSEL STYLES - Card Stack Effect
+   ====================== */
+
+/* Carousel Wrapper - Main Container */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+    perspective: 1000px;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Active card - front and center */
+.carousel-slide.position-0 {
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1) rotateY(0deg);
+    opacity: 1;
+    z-index: 30;
+}
+
+/* First card behind - stacked right */
+.carousel-slide.position-1 {
+    transform: translate(-50%, -50%) translate3d(30px, 15px, -50px) scale(0.94) rotateY(-5deg);
+    opacity: 0.7;
+    z-index: 20;
+    pointer-events: none;
+}
+
+/* Second card behind - more stacked */
+.carousel-slide.position-2 {
+    transform: translate(-50%, -50%) translate3d(60px, 30px, -100px) scale(0.88) rotateY(-10deg);
+    opacity: 0.4;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Cards exiting to the left */
+.carousel-slide.position-exit {
+    transform: translate(-50%, -50%) translate3d(-120%, -20px, -150px) scale(0.85) rotateY(15deg);
+    opacity: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Cards entering from the right */
+.carousel-slide.position-enter {
+    transform: translate(-50%, -50%) translate3d(120%, 40px, -150px) scale(0.82) rotateY(-15deg);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.carousel-card {
+    background: var(--secondary-black);
+    border: 2px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    transform: translateZ(0);
+}
+
+.carousel-slide.position-0 .carousel-card {
+    border-color: var(--accent-white);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.15);
+}
+
+.carousel-card img {
+    width: 100%;
+    max-width: 450px;
+    height: 280px;
+    object-fit: contain;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    transform: translateZ(0);
+}
+
+.carousel-info {
+    text-align: center;
+    width: 100%;
+}
+
+.carousel-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: var(--accent-white);
+    margin-bottom: 10px;
+}
+
+.carousel-info p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+}
+
+/* Hide dots (not needed for auto-rotate) */
+.carousel-dots {
+    display: none;
+}
+
+/* Responsive Carousel Adjustments */
+@media (max-width: 1024px) {
+    .carousel-wrapper {
+        max-width: 600px;
+        height: 450px;
+    }
+
+    .carousel-slide {
+        max-width: 520px;
+        height: 400px;
+    }
+    
+    .carousel-card {
+        padding: 30px;
+    }
+    
+    .carousel-card img {
+        height: 240px;
+        max-width: 380px;
+    }
+    
+    .carousel-info h3 {
+        font-size: 1.9rem;
+    }
+
+    .carousel-slide.position-1 {
+        transform: translate(-50%, -50%) translate3d(25px, 12px, -50px) scale(0.95) rotateY(-4deg);
+    }
+
+    .carousel-slide.position-2 {
+        transform: translate(-50%, -50%) translate3d(50px, 24px, -100px) scale(0.90) rotateY(-8deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        max-width: 100%;
+        height: 420px;
+        padding: 0 20px;
+    }
+
+    .carousel-slide {
+        max-width: 100%;
+        height: 380px;
+        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                    opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .carousel-card {
+        padding: 25px;
+    }
+
+    .carousel-card img {
+        height: 220px;
+        max-width: 320px;
+    }
+
+    .carousel-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-info p {
+        font-size: 1rem;
+    }
+
+    .carousel-slide.position-1 {
+        transform: translate(-50%, -50%) translate3d(20px, 10px, -30px) scale(0.94) rotateY(-3deg);
+    }
+
+    .carousel-slide.position-2 {
+        transform: translate(-50%, -50%) translate3d(40px, 20px, -60px) scale(0.88) rotateY(-6deg);
+    }
+
+    .carousel-slide.position-exit {
+        transform: translate(-50%, -50%) translate3d(-100%, -15px, -90px) scale(0.85) rotateY(10deg);
+    }
+
+    .carousel-slide.position-enter {
+        transform: translate(-50%, -50%) translate3d(100%, 30px, -90px) scale(0.82) rotateY(-10deg);
+    }
+}
+
+/* ======================
+   CONTACT FORM STYLES
+   ====================== */
+
+/* Contact Form Input Styles */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-black);
+    border: 2px solid var(--border-gray);
+    color: var(--text-light);
+    font-size: 1rem;
+    border-radius: 0px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-white);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-color: var(--text-muted);
+}
+
+.contact-form label {
+    display: block;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-message {
+    padding: 15px;
+    border-radius: 0px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.form-message.success {
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid #00ff00;
+    color: #00ff00;
+}
+
+.form-message.error {
+    background: rgba(255, 0, 0, 0.1);
+    border: 2px solid #ff0000;
+    color: #ff0000;
+}
+
+/* Contact Links Hover Effects */
+#contact a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent-white);
+}
+
+#contact a:hover {
+    color: var(--text-light);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-bottom-color: var(--text-light);
+}
+
+/* ======================
+   HERO SECTION ANIMATIONS
+   ====================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* ======================
+   UTILITY CLASSES
+   ====================== */
+
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: 10px; }
+.mt-2 { margin-top: 20px; }
+.mt-3 { margin-top: 30px; }
+.mt-4 { margin-top: 40px; }
+.mt-5 { margin-top: 50px; }
+
+.mb-1 { margin-bottom: 10px; }
+.mb-2 { margin-bottom: 20px; }
+.mb-3 { margin-bottom: 30px; }
+.mb-4 { margin-bottom: 40px; }
+.mb-5 { margin-bottom: 50px; }
+
+.p-1 { padding: 10px; }
+.p-2 { padding: 20px; }
+.p-3 { padding: 30px; }
+.p-4 { padding: 40px; }
+.p-5 { padding: 50px; }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
 

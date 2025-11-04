@@ -1,5 +1,20 @@
 // Interactive Effects for Jake Barton Website
-// Includes: Particles Background, Flowing Menu, Infinite Scroll
+// Includes: Particles Background, Flowing Menu, Scroll Reveal
+
+// ======================
+// UTILITY: Debounce Function
+// ======================
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
 
 // ======================
 // 1. PARTICLES BACKGROUND
@@ -38,8 +53,9 @@ class ParticlesBackground {
         this.createParticles();
         this.animate();
 
-        // Handle resize
-        window.addEventListener('resize', () => this.resize());
+        // Handle resize with debouncing
+        const debouncedResize = debounce(() => this.resize(), 250);
+        window.addEventListener('resize', debouncedResize);
     }
 
     resize() {
@@ -114,10 +130,7 @@ class FlowingMenu {
         this.links = Array.from(document.querySelectorAll('nav ul li a'));
         this.indicator = null;
         
-        if (!this.nav || this.links.length === 0) {
-            console.warn('FlowingMenu: Nav or links not found');
-            return;
-        }
+        if (!this.nav || this.links.length === 0) return;
         
         this.init();
     }
@@ -129,8 +142,6 @@ class FlowingMenu {
         this.indicator.style.width = '0px';
         this.indicator.style.opacity = '1';
         this.nav.appendChild(this.indicator);
-        
-        console.log('FlowingMenu: Indicator created and appended');
 
         // Track active link
         this.links.forEach((link, index) => {
@@ -143,10 +154,8 @@ class FlowingMenu {
         // Set initial position
         const activeLink = document.querySelector('nav ul li a.active') || this.links[0];
         if (activeLink) {
-            // Small delay to ensure nav is fully rendered
             setTimeout(() => {
                 this.setActive(activeLink);
-                console.log('FlowingMenu: Initial position set');
             }, 50);
         }
 
@@ -170,8 +179,6 @@ class FlowingMenu {
         
         this.indicator.style.width = `${width}px`;
         this.indicator.style.left = `${left}px`;
-        
-        console.log(`FlowingMenu: Moved to ${left}px, width ${width}px`);
     }
 
     setActive(link) {
@@ -182,23 +189,7 @@ class FlowingMenu {
 }
 
 // ======================
-// 3. INFINITE SCROLL (Skills)
-// ======================
-// NOTE: Skills now use pure CSS animation - no JavaScript needed!
-// See styles.css for .skills-container and @keyframes scroll
-class InfiniteScroll {
-    constructor(selector, speed = 1) {
-        console.log('InfiniteScroll: Now using pure CSS animation - JavaScript not needed');
-        // Keeping this class for backwards compatibility but it does nothing now
-    }
-
-    init() {
-        // CSS handles everything now!
-    }
-}
-
-// ======================
-// 4. SCROLL REVEAL ANIMATIONS
+// 3. SCROLL REVEAL ANIMATIONS
 // ======================
 class ScrollReveal {
     constructor() {
@@ -235,49 +226,27 @@ class ScrollReveal {
 // ======================
 function initializeEffects() {
     try {
-        // Initialize particles background
         new ParticlesBackground();
-        console.log('✅ Particles initialized');
     } catch (e) {
-        console.error('❌ Particles failed:', e);
+        // Silently fail in production
     }
 
     try {
-        // Initialize flowing menu
         new FlowingMenu();
-        console.log('✅ Flowing menu initialized');
     } catch (e) {
-        console.error('❌ Flowing menu failed:', e);
+        // Silently fail in production
     }
 
     try {
-        // Initialize infinite scroll for skills (if exists)
-        const skillsContainer = document.querySelector('.skills-container');
-        if (skillsContainer) {
-            new InfiniteScroll('.skills-container', 0.5);
-            console.log('✅ Infinite scroll initialized');
-        }
-    } catch (e) {
-        console.error('❌ Infinite scroll failed:', e);
-    }
-
-    try {
-        // Initialize scroll reveal
         new ScrollReveal();
-        console.log('✅ Scroll reveal initialized');
     } catch (e) {
-        console.error('❌ Scroll reveal failed:', e);
+        // Silently fail in production
     }
-
-    console.log('✨ All effects loaded!');
 }
 
-// Multiple initialization attempts to ensure loading
+// Initialize when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeEffects);
 } else {
     initializeEffects();
 }
-
-// Fallback: try again after a short delay
-setTimeout(initializeEffects, 100);
