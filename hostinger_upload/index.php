@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jake Barton - Game Designer & 3D Artist</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="stylesheet" href="assets/css/styles.css?v=20251104-2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -182,7 +183,6 @@
         <!-- Skills Section -->
         <div class="content-section" id="skills">
             <h2>TECHNICAL SKILLS & TOOLS</h2>
-            <p style="margin-bottom: 30px;">Technologies and software I work with:</p>
             <div class="skills-container">
                 <?php foreach ($skills as $skill): ?>
                     <span class="skill-tag"><?php echo $skill; ?></span>

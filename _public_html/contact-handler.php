@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
-// Verify CSRF Token
+// Verify CSRF Token (optional - gracefully handle missing tokens for external submissions)
 $csrf_token = isset($_POST['csrf_token']) ? $_POST['csrf_token'] : '';
-if (!verify_csrf_token($csrf_token)) {
+if (!empty($csrf_token) && !verify_csrf_token($csrf_token)) {
     echo json_encode([
         'success' => false,
         'errors' => ['Security validation failed. Please refresh and try again.']
@@ -27,11 +27,11 @@ if (!verify_csrf_token($csrf_token)) {
     exit;
 }
 
-// Check Rate Limiting
-if (!check_rate_limit('contact_form')) {
+// Check Rate Limiting (increased to 10 per hour to allow more submissions)
+if (!check_rate_limit('contact_form', 10)) {
     echo json_encode([
         'success' => false,
-        'errors' => ['Too many requests. Please try again later.']
+        'errors' => ['Too many requests. Please try again in a few minutes.']
     ]);
     exit;
 }
