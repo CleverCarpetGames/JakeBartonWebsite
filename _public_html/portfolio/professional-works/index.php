@@ -193,7 +193,7 @@
         </a>
 
         <!-- Veritas Social -->
-        <a href="https://www.veritassocial.co" target="_blank" class="pw-card rv" style="transition-delay:0.16s">
+        <a href="veritas-social/" class="pw-card rv" style="transition-delay:0.16s">
           <div class="pw-card-img" style="background:#0d0d0a;">
             <img src="../../assets/images/VeritasAsset 1.svg" alt="Veritas Social"
                  style="object-fit:contain;padding:2.5rem;">
@@ -221,14 +221,14 @@
                  style="object-fit:contain;padding:2rem;">
           </div>
           <div class="pw-card-body">
-            <span class="pw-card-eyebrow">Client Project &middot; 2025</span>
+            <span class="pw-card-eyebrow">Internship &middot; 2025</span>
             <h2 class="pw-card-title">TechBirmingham Sponsor AI</h2>
-            <p class="pw-card-desc">AI-powered sponsor matching tool built for TechBirmingham &mdash; Next.js front-end with intelligent recommendations to connect sponsors with relevant tech events.</p>
+            <p class="pw-card-desc">AI-powered sponsor matching tool built during an internship at TechBirmingham &mdash; Next.js front-end with intelligent recommendations to connect sponsors with relevant tech events.</p>
             <div class="pw-card-footer">
               <div class="pw-card-tags">
                 <span class="tag tag-muted">Next.js</span>
                 <span class="tag tag-muted">AI</span>
-                <span class="tag tag-muted">Client Work</span>
+                <span class="tag tag-muted">Internship</span>
               </div>
               <span class="pw-arrow">&#8599;</span>
             </div>

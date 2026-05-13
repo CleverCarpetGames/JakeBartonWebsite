@@ -545,7 +545,7 @@
           </div>
           <div class="b-overlay" style="background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.1) 100%);transition:opacity 0.3s;"></div>
           <div class="b-content">
-            <span class="b-eyebrow">AI · Next.js</span>
+            <span class="b-eyebrow">Internship · AI Tool</span>
             <h2 class="b-title">TechBirmingham Sponsor AI</h2>
           </div>
           <span class="b-arrow">↗</span>

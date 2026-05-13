@@ -195,39 +195,28 @@
                     <span class="eyebrow">Deliverables</span>
                     <h2>Site Pages</h2>
                 </div>
-                <p class="reveal" style="color: var(--text-muted); margin-bottom: 0.5rem;">A fully multi-page PHP site replacing the original GoDaddy builder.</p>
+                <p class="reveal" style="color: var(--text-muted); margin-bottom: 2rem;">A fully multi-page PHP site replacing the original GoDaddy builder. Click any page to explore it live.</p>
 
-                <div class="is-pages-grid stagger-children">
-                    <a href="index.php" target="_blank" class="is-page-card">
-                        <div class="is-page-preview" style="background: linear-gradient(135deg,#0a0a0a,#1a1a2e); display:flex; align-items:center; justify-content:center;">
-                            <img src="Assets/IronsparkLogo.webp" alt="" style="height:48px; opacity:0.8; object-fit:contain;">
-                        </div>
-                        <div class="is-page-card-label">Home</div>
+                <div class="reveal" style="display:flex;flex-direction:column;gap:0.75rem;">
+                    <?php
+                    $pages = [
+                        ['href'=>'index.php',    'label'=>'Home',     'desc'=>'Hero video scrub, division cards, animated orange logo wipe'],
+                        ['href'=>'about.php',    'label'=>'About',    'desc'=>'Studio story, team, and brand identity'],
+                        ['href'=>'services.php', 'label'=>'Services', 'desc'=>'Entertainment and healthcare division offerings'],
+                        ['href'=>'work.php',     'label'=>'Work',     'desc'=>'Showreel and project case studies'],
+                        ['href'=>'contact.php',  'label'=>'Contact',  'desc'=>'Inquiry form with API email delivery'],
+                    ];
+                    foreach ($pages as $i => $p): ?>
+                    <a href="<?= $p['href'] ?>" target="_blank"
+                       style="display:flex;align-items:center;gap:1.5rem;padding:1.1rem 1.5rem;background:#0f0f0f;border:1px solid rgba(255,255,255,0.08);border-radius:12px;text-decoration:none;color:var(--text);transition:border-color 0.25s,background 0.25s;"
+                       onmouseover="this.style.borderColor='rgba(255,255,255,0.25)';this.style.background='#161616'"
+                       onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.background='#0f0f0f'">
+                        <span style="font-family:var(--font-display);font-size:0.65rem;font-weight:800;letter-spacing:0.12em;color:var(--text-faint);flex-shrink:0;width:1.5rem;text-align:right"><?= str_pad($i+1, 2, '0', STR_PAD_LEFT) ?></span>
+                        <span style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;letter-spacing:-0.02em;min-width:90px"><?= $p['label'] ?></span>
+                        <span style="font-size:0.85rem;color:var(--text-muted);flex:1"><?= $p['desc'] ?></span>
+                        <span style="color:var(--text-faint);font-size:1rem;flex-shrink:0">↗</span>
                     </a>
-                    <a href="about.php" target="_blank" class="is-page-card">
-                        <div class="is-page-preview" style="background: linear-gradient(135deg,#0f0f1a,#1a1a30); display:flex; align-items:center; justify-content:center;">
-                            <span style="color:rgba(255,255,255,0.15); font-size:3rem; font-weight:700;">About</span>
-                        </div>
-                        <div class="is-page-card-label">About</div>
-                    </a>
-                    <a href="services.php" target="_blank" class="is-page-card">
-                        <div class="is-page-preview" style="background: linear-gradient(135deg,#0a1020,#1a2040); display:flex; align-items:center; justify-content:center;">
-                            <span style="color:rgba(255,255,255,0.15); font-size:3rem; font-weight:700;">Services</span>
-                        </div>
-                        <div class="is-page-card-label">Services</div>
-                    </a>
-                    <a href="work.php" target="_blank" class="is-page-card">
-                        <div class="is-page-preview" style="background: linear-gradient(135deg,#100a1a,#201030); display:flex; align-items:center; justify-content:center;">
-                            <span style="color:rgba(255,255,255,0.15); font-size:3rem; font-weight:700;">Work</span>
-                        </div>
-                        <div class="is-page-card-label">Work</div>
-                    </a>
-                    <a href="contact.php" target="_blank" class="is-page-card">
-                        <div class="is-page-preview" style="background: linear-gradient(135deg,#0a1a10,#103020); display:flex; align-items:center; justify-content:center;">
-                            <span style="color:rgba(255,255,255,0.15); font-size:3rem; font-weight:700;">Contact</span>
-                        </div>
-                        <div class="is-page-card-label">Contact</div>
-                    </a>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
