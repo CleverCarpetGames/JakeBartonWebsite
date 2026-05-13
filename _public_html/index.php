@@ -369,66 +369,8 @@ $contact = [
               </div>
             </a>
 
-            <!-- Card 7 — Forge -->
-            <a href="https://forge-jakebarton.vercel.app" target="_blank" class="wa-card" data-idx="7">
-              <img class="wa-media" src="assets/images/forge-cover.svg" alt="Forge" style="object-fit:cover">
-              <div class="wa-grad"></div>
-              <div class="wa-content">
-                <div class="wa-tags">
-                  <span class="tag tag-muted">Next.js 14</span>
-                  <span class="tag tag-muted">TypeScript</span>
-                  <span class="tag tag-muted">In Development</span>
-                </div>
-                <h2 class="wa-title">Forge</h2>
-                <p class="wa-desc">A social platform where projects are posts — built for junior devs to build in public, remix work, and grow with an AI mentor.</p>
-                <span class="wa-cta">View Project ↗</span>
-              </div>
-              <div class="wa-badge">In Development</div>
-              <div class="wa-bar">
-                <span class="wa-bar-num">08</span>
-                <div class="wa-bar-thumb">
-                  <img src="assets/images/forge-cover.svg" alt="Forge" style="object-fit:cover;width:100%;height:100%">
-                </div>
-                <span class="wa-bar-title">Forge</span>
-                <div class="wa-bar-tags">
-                  <span class="tag tag-muted">Next.js 14</span>
-                  <span class="tag tag-muted">TypeScript</span>
-                </div>
-                <span class="wa-bar-arrow">↗</span>
-              </div>
-            </a>
-
-            <!-- Card 8 — ClearDesk -->
-            <a href="portfolio/web-programming/" class="wa-card" data-idx="8">
-              <img class="wa-media" src="assets/images/cleardesk-cover.svg" alt="ClearDesk" style="object-fit:cover">
-              <div class="wa-grad"></div>
-              <div class="wa-content">
-                <div class="wa-tags">
-                  <span class="tag tag-muted">Electron</span>
-                  <span class="tag tag-muted">React</span>
-                  <span class="tag tag-muted">In Development</span>
-                </div>
-                <h2 class="wa-title">ClearDesk</h2>
-                <p class="wa-desc">AI-powered macOS task manager that converts inbox chaos into a clear daily plan — email parsing, OCR invoices, SMS digest.</p>
-                <span class="wa-cta">View Project ↗</span>
-              </div>
-              <div class="wa-badge">In Development</div>
-              <div class="wa-bar">
-                <span class="wa-bar-num">09</span>
-                <div class="wa-bar-thumb">
-                  <img src="assets/images/cleardesk-cover.svg" alt="ClearDesk" style="object-fit:cover;width:100%;height:100%">
-                </div>
-                <span class="wa-bar-title">ClearDesk</span>
-                <div class="wa-bar-tags">
-                  <span class="tag tag-muted">Electron</span>
-                  <span class="tag tag-muted">AI</span>
-                </div>
-                <span class="wa-bar-arrow">↗</span>
-              </div>
-            </a>
-
-            <!-- Card 9 — October -->
-            <a href="portfolio/web-programming/" class="wa-card" data-idx="9">
+            <!-- Card 7 — October -->
+            <a href="portfolio/web-programming/" class="wa-card" data-idx="7">
               <img class="wa-media" src="assets/images/october-cover.svg" alt="October AI" style="object-fit:cover">
               <div class="wa-grad"></div>
               <div class="wa-content">
@@ -443,7 +385,7 @@ $contact = [
               </div>
               <div class="wa-badge">In Development</div>
               <div class="wa-bar">
-                <span class="wa-bar-num">10</span>
+                <span class="wa-bar-num">07</span>
                 <div class="wa-bar-thumb">
                   <img src="assets/images/october-cover.svg" alt="October" style="object-fit:cover;width:100%;height:100%">
                 </div>

@@ -81,7 +81,7 @@
                     </div>
 
                     <!-- IronSpark Studios -->
-                    <div class="work-card tilt-card reveal" style="cursor: pointer;" onclick="window.location.href='IronSpark/';">
+                    <div class="work-card tilt-card reveal" style="cursor: pointer;" onclick="window.location.href='IronSpark/showcase.php';">
                         <div class="work-card-img">
                             <img src="IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark Studios" style="width: 100%; height: 100%; object-fit: contain; padding: 28px; background: #0a0a0a;">
                         </div>
@@ -93,7 +93,7 @@
                             </p>
                             <span class="tag tag-muted" style="display:inline-block;margin-bottom:16px">Fellowship Work</span>
                             <br>
-                            <a href="IronSpark/" class="btn-primary" onclick="event.stopPropagation();">View Site →</a>
+                            <a href="IronSpark/showcase.php" class="btn-primary" onclick="event.stopPropagation();">View Project →</a>
                         </div>
                     </div>
 
