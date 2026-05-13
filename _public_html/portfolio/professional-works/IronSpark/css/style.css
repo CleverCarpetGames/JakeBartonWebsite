@@ -324,8 +324,8 @@ body.has-hero .btn--spark:hover { color: var(--ink) !important; border-color: va
   /* Paint the entire div in brand orange */
   background-color: var(--orange);
   /* Punch the logo shape through using the image as a mask */
-  -webkit-mask-image: url('/Assets/IronsparkLogo.webp');
-          mask-image: url('/Assets/IronsparkLogo.webp');
+  -webkit-mask-image: url('/portfolio/professional-works/IronSpark/Assets/IronsparkLogo.webp');
+          mask-image: url('/portfolio/professional-works/IronSpark/Assets/IronsparkLogo.webp');
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
