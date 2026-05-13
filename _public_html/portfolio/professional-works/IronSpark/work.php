@@ -37,7 +37,7 @@ require_once 'includes/header.php';
   <div class="container">
     <div class="work-table">
 
-      <a href="/work.php" class="work-row" data-cat="entertainment" data-preview="">
+      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="entertainment" data-preview="">
         <span class="work-row__id">IS&mdash;001</span>
         <span class="work-row__title">The Ember Series</span>
         <span class="work-row__tags">Entertainment &mdash; Original IP &mdash; 2D Animation</span>
@@ -45,7 +45,7 @@ require_once 'includes/header.php';
         <span class="work-row__arrow">&#8599;</span>
       </a>
 
-      <a href="/work.php" class="work-row" data-cat="healthcare" data-preview="">
+      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="healthcare" data-preview="">
         <span class="work-row__id">IS&mdash;002</span>
         <span class="work-row__title">Lifeline Patient Portal</span>
         <span class="work-row__tags">Healthcare &mdash; Motion Design &mdash; Patient Education</span>
@@ -53,7 +53,7 @@ require_once 'includes/header.php';
         <span class="work-row__arrow">&#8599;</span>
       </a>
 
-      <a href="/work.php" class="work-row" data-cat="entertainment" data-preview="">
+      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="entertainment" data-preview="">
         <span class="work-row__id">IS&mdash;003</span>
         <span class="work-row__title">Wonderforge</span>
         <span class="work-row__tags">Entertainment &mdash; Visual Development &mdash; Series Concept</span>
@@ -61,7 +61,7 @@ require_once 'includes/header.php';
         <span class="work-row__arrow">&#8599;</span>
       </a>
 
-      <a href="/work.php" class="work-row" data-cat="healthcare" data-preview="">
+      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="healthcare" data-preview="">
         <span class="work-row__id">IS&mdash;004</span>
         <span class="work-row__title">ClearPath</span>
         <span class="work-row__tags">Healthcare &mdash; Behavior Change &mdash; Script &amp; Animation</span>
@@ -69,7 +69,7 @@ require_once 'includes/header.php';
         <span class="work-row__arrow">&#8599;</span>
       </a>
 
-      <a href="/work.php" class="work-row" data-cat="production" data-preview="">
+      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="production" data-preview="">
         <span class="work-row__id">IS&mdash;005</span>
         <span class="work-row__title">Kinetic Brand Rebrand</span>
         <span class="work-row__tags">Production &mdash; Brand Film &mdash; Motion System</span>
@@ -77,7 +77,7 @@ require_once 'includes/header.php';
         <span class="work-row__arrow">&#8599;</span>
       </a>
 
-      <a href="/work.php" class="work-row" data-cat="entertainment" data-preview="">
+      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="entertainment" data-preview="">
         <span class="work-row__id">IS&mdash;006</span>
         <span class="work-row__title">Hollow &amp; the Haunt</span>
         <span class="work-row__tags">Entertainment &mdash; Short Film &mdash; Character Animation</span>
@@ -85,7 +85,7 @@ require_once 'includes/header.php';
         <span class="work-row__arrow">&#8599;</span>
       </a>
 
-      <a href="/work.php" class="work-row" data-cat="healthcare" data-preview="">
+      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="healthcare" data-preview="">
         <span class="work-row__id">IS&mdash;007</span>
         <span class="work-row__title">PediatricPath</span>
         <span class="work-row__tags">Healthcare &mdash; Pediatric Education &mdash; 2D</span>
@@ -93,7 +93,7 @@ require_once 'includes/header.php';
         <span class="work-row__arrow">&#8599;</span>
       </a>
 
-      <a href="/work.php" class="work-row" data-cat="production" data-preview="">
+      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="production" data-preview="">
         <span class="work-row__id">IS&mdash;008</span>
         <span class="work-row__title">Roots &amp; Routes</span>
         <span class="work-row__tags">Production &mdash; Documentary Motion &mdash; Title Design</span>
@@ -101,7 +101,7 @@ require_once 'includes/header.php';
         <span class="work-row__arrow">&#8599;</span>
       </a>
 
-      <a href="/work.php" class="work-row" data-cat="entertainment" data-preview="">
+      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="entertainment" data-preview="">
         <span class="work-row__id">IS&mdash;009</span>
         <span class="work-row__title">Neon Valley</span>
         <span class="work-row__tags">Entertainment &mdash; Original IP &mdash; Pilot</span>
@@ -109,7 +109,7 @@ require_once 'includes/header.php';
         <span class="work-row__arrow">&#8599;</span>
       </a>
 
-      <a href="/work.php" class="work-row" data-cat="healthcare" data-preview="">
+      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="healthcare" data-preview="">
         <span class="work-row__id">IS&mdash;010</span>
         <span class="work-row__title">Meridian Health Network</span>
         <span class="work-row__tags">Healthcare &mdash; Institutional Brand &mdash; Motion</span>
@@ -137,7 +137,7 @@ require_once 'includes/header.php';
         <p style="font-size:1rem;line-height:1.75;color:var(--muted-2);max-width:38ch">
           We work with a carefully chosen set of clients each year. Reach out and let's see if we're the right fit.
         </p>
-        <a href="/contact.php" class="btn btn--spark btn--lg">
+        <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--spark btn--lg">
           Start a Project
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>

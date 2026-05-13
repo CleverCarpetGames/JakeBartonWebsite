@@ -25,12 +25,12 @@ require_once __DIR__ . '/config.php';
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <!-- Styles -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/portfolio/professional-works/IronSpark/css/style.css">
 </head>
 <body<?= isset($bodyClass) ? ' class="'.htmlspecialchars($bodyClass).'"' : '' ?>>
 
 <!-- Main script — lives outside #page so it never gets re-executed on DOM swap -->
-<script src="/js/main.js" defer></script>
+<script src="/portfolio/professional-works/IronSpark/js/main.js" defer></script>
 
 <!-- Page transition curtain -->
 <div id="curtain" aria-hidden="true">
@@ -44,19 +44,19 @@ require_once __DIR__ . '/config.php';
 <!-- Nav -->
 <nav class="nav" id="mainNav" aria-label="Main navigation"
      data-cursor-theme="<?= (isset($bodyClass) && str_contains($bodyClass, 'has-hero')) ? 'light' : 'dark' ?>">
-  <a href="/" class="nav__logo" aria-label="IronSpark Studios — Home">
-    <img src="/Assets/IronsparkLogo.webp" alt="IronSpark Studios logo" width="120" height="26">
+  <a href="/portfolio/professional-works/IronSpark/" class="nav__logo" aria-label="IronSpark Studios — Home">
+    <img src="/portfolio/professional-works/IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark Studios logo" width="120" height="26">
   </a>
 
   <ul class="nav__links" role="list">
-    <li><a href="/about.php"    <?= $current==='about'    ? 'aria-current="page"' : '' ?>>About</a></li>
-    <li><a href="/services.php" <?= $current==='services' ? 'aria-current="page"' : '' ?>>Services</a></li>
-    <li><a href="/work.php"     <?= $current==='work'     ? 'aria-current="page"' : '' ?>>Work</a></li>
-    <li><a href="/contact.php"  <?= $current==='contact'  ? 'aria-current="page"' : '' ?>>Contact</a></li>
+    <li><a href="/portfolio/professional-works/IronSpark/about.php"    <?= $current==='about'    ? 'aria-current="page"' : '' ?>>About</a></li>
+    <li><a href="/portfolio/professional-works/IronSpark/services.php" <?= $current==='services' ? 'aria-current="page"' : '' ?>>Services</a></li>
+    <li><a href="/portfolio/professional-works/IronSpark/work.php"     <?= $current==='work'     ? 'aria-current="page"' : '' ?>>Work</a></li>
+    <li><a href="/portfolio/professional-works/IronSpark/contact.php"  <?= $current==='contact'  ? 'aria-current="page"' : '' ?>>Contact</a></li>
   </ul>
 
   <div class="nav__cta">
-    <a href="/contact.php" class="btn btn--spark">
+    <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--spark">
       <span>Start a Project</span>
       <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12L12 1M12 1H4M12 1v8"/></svg>
     </a>
@@ -71,13 +71,13 @@ require_once __DIR__ . '/config.php';
 <!-- Mobile full-screen menu (outside nav so it covers entire viewport) -->
 <div class="nav__mobile" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Navigation">
   <ul class="nav__mobile-links" role="list">
-    <li><a href="/about.php"    <?= $current==='about'    ? 'aria-current="page"' : '' ?>>About</a></li>
-    <li><a href="/services.php" <?= $current==='services' ? 'aria-current="page"' : '' ?>>Services</a></li>
-    <li><a href="/work.php"     <?= $current==='work'     ? 'aria-current="page"' : '' ?>>Work</a></li>
-    <li><a href="/contact.php"  <?= $current==='contact'  ? 'aria-current="page"' : '' ?>>Contact</a></li>
+    <li><a href="/portfolio/professional-works/IronSpark/about.php"    <?= $current==='about'    ? 'aria-current="page"' : '' ?>>About</a></li>
+    <li><a href="/portfolio/professional-works/IronSpark/services.php" <?= $current==='services' ? 'aria-current="page"' : '' ?>>Services</a></li>
+    <li><a href="/portfolio/professional-works/IronSpark/work.php"     <?= $current==='work'     ? 'aria-current="page"' : '' ?>>Work</a></li>
+    <li><a href="/portfolio/professional-works/IronSpark/contact.php"  <?= $current==='contact'  ? 'aria-current="page"' : '' ?>>Contact</a></li>
   </ul>
   <div class="nav__mobile-footer">
-    <a href="/contact.php" class="btn btn--orange btn--lg">
+    <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--orange btn--lg">
       <span>Start a Project</span>
       <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12L12 1M12 1H4M12 1v8"/></svg>
     </a>

@@ -83,7 +83,7 @@
                     <!-- IronSpark Studios -->
                     <div class="work-card tilt-card reveal" style="cursor: pointer;" onclick="window.location.href='IronSpark/showcase.php';">
                         <div class="work-card-img">
-                            <img src="IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark Studios" style="width: 100%; height: 100%; object-fit: contain; padding: 28px; background: #0a0a0a;">
+                            <img src="IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark Studios" style="width: 100%; height: 100%; object-fit: contain; padding: 28px; background: #0a0a0a; filter: brightness(0) saturate(100%) invert(56%) sepia(75%) saturate(1200%) hue-rotate(360deg) brightness(100%);">
                         </div>
                         <div class="work-card-info">
                             <p class="eyebrow">Fellowship · Web Design &amp; Development</p>

@@ -4,8 +4,8 @@ $pageDesc  = 'IronSpark Studios — Birmingham, AL animation and media studio. O
 $bodyClass = 'home-page has-hero';
 require_once 'includes/header.php';
 
-$entVideo = '/Assets/' . rawurlencode('Gaming Stock Footage Medium shot of young men beta testing video game  4K  HD - Royalty Free Music Video & Template (1080p, h264, youtube).mp4');
-$hcVideo  = '/Assets/' . rawurlencode('4K Hospital Notes  Clipboard  Sick  Patient  Free Stock Video Footage [ No Copyright ] - HD Video Library - No Copyright Footage (1080p, h264, youtube).mp4');
+$entVideo = '/portfolio/professional-works/IronSpark/Assets/' . rawurlencode('Gaming Stock Footage Medium shot of young men beta testing video game  4K  HD - Royalty Free Music Video & Template (1080p, h264, youtube).mp4');
+$hcVideo  = '/portfolio/professional-works/IronSpark/Assets/' . rawurlencode('4K Hospital Notes  Clipboard  Sick  Patient  Free Stock Video Footage [ No Copyright ] - HD Video Library - No Copyright Footage (1080p, h264, youtube).mp4');
 ?>
 
 <!-- HERO -->
@@ -14,7 +14,7 @@ $hcVideo  = '/Assets/' . rawurlencode('4K Hospital Notes  Clipboard  Sick  Patie
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__bg-scene" id="heroBgScene">
       <video class="hero__bg-video" id="heroBgVideo"
-             src="/Assets/hero-bg-scrub.mp4"
+             src="/portfolio/professional-works/IronSpark/Assets/hero-bg-scrub.mp4"
              muted playsinline preload="auto"></video>
     </div>
     <div class="hero__bg-overlay"></div>
@@ -35,7 +35,7 @@ $hcVideo  = '/Assets/' . rawurlencode('4K Hospital Notes  Clipboard  Sick  Patie
   </div>
 
   <div class="hero__footer">
-    <a href="/work.php" class="hero__view-work">
+    <a href="/portfolio/professional-works/IronSpark/work.php" class="hero__view-work">
       <span>View Our Work</span>
       <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12L12 1M12 1H4M12 1v8"/></svg>
     </a>
@@ -52,9 +52,9 @@ $hcVideo  = '/Assets/' . rawurlencode('4K Hospital Notes  Clipboard  Sick  Patie
 
   <div class="divisions__cards">
 
-    <a class="division division--ent" href="/services.php#entertainment" data-cursor-theme="light">
+    <a class="division division--ent" href="/portfolio/professional-works/IronSpark/services.php#entertainment" data-cursor-theme="light">
       <div class="division__media">
-        <img class="division__img" src="/Assets/rs=w-776,h-388,cg-true-3.webp" alt="Entertainment production" draggable="false">
+        <img class="division__img" src="/portfolio/professional-works/IronSpark/Assets/rs=w-776,h-388,cg-true-3.webp" alt="Entertainment production" draggable="false">
         <video class="division__video" src="<?= $entVideo ?>" muted loop playsinline preload="none"></video>
       </div>
       <div class="division__overlay"></div>
@@ -69,9 +69,9 @@ $hcVideo  = '/Assets/' . rawurlencode('4K Hospital Notes  Clipboard  Sick  Patie
       </span>
     </a>
 
-    <a class="division division--hc" href="/services.php#healthcare" data-cursor-theme="light">
+    <a class="division division--hc" href="/portfolio/professional-works/IronSpark/services.php#healthcare" data-cursor-theme="light">
       <div class="division__media">
-        <img class="division__img" src="/Assets/rs=w-776,h-388,cg-true-2.webp" alt="Healthcare animation" draggable="false">
+        <img class="division__img" src="/portfolio/professional-works/IronSpark/Assets/rs=w-776,h-388,cg-true-2.webp" alt="Healthcare animation" draggable="false">
         <video class="division__video" src="<?= $hcVideo ?>" muted loop playsinline preload="none"></video>
       </div>
       <div class="division__overlay"></div>
@@ -106,13 +106,13 @@ $hcVideo  = '/Assets/' . rawurlencode('4K Hospital Notes  Clipboard  Sick  Patie
     <div class="manifesto-cta__inner">
       <div class="manifesto-cta__text-col">
         <p class="manifesto__text" id="manifestoText">We build stories that connect, educate, and entertain.</p>
-        <a href="/about.php" class="manifesto__link">
+        <a href="/portfolio/professional-works/IronSpark/about.php" class="manifesto__link">
           Our Story
           <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12L12 1M12 1H4M12 1v8"/></svg>
         </a>
       </div>
       <div class="manifesto-cta__action">
-        <a href="/contact.php" class="btn btn--orange btn--lg" data-cursor-theme="on-orange">
+        <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--orange btn--lg" data-cursor-theme="on-orange">
           Start a Project
           <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12L12 1M12 1H4M12 1v8"/></svg>
         </a>

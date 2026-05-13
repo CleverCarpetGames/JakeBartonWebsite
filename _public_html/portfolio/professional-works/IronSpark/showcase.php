@@ -136,7 +136,7 @@
 
                     <!-- Left: description -->
                     <div>
-                        <img src="Assets/IronsparkLogo.webp" alt="IronSpark Studios" class="is-logo reveal">
+                        <img src="Assets/IronsparkLogo.webp" alt="IronSpark Studios" class="is-logo reveal" style="filter: brightness(0) saturate(100%) invert(56%) sepia(75%) saturate(1200%) hue-rotate(360deg) brightness(100%)">
                         <h2 class="reveal" style="font-size: clamp(1.6rem,3vw,2.4rem); margin-bottom: 1.25rem;">About the Project</h2>
                         <p class="reveal" style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1.25rem;">
                             IronSpark Studios is a Birmingham-based animation and media studio working across entertainment and healthcare —

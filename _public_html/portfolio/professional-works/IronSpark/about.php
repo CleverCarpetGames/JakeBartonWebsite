@@ -73,13 +73,13 @@ require_once 'includes/header.php';
         <span class="discipline-block__num" aria-hidden="true">ENT</span>
         <h3>Entertainment</h3>
         <p>We develop original animated content for kids and families — series concepts, character worlds, and narrative formats built to last.</p>
-        <a href="/services.php#entertainment" class="discipline-block__link">Explore Entertainment &rarr;</a>
+        <a href="/portfolio/professional-works/IronSpark/services.php#entertainment" class="discipline-block__link">Explore Entertainment &rarr;</a>
       </div>
       <div class="discipline-block" data-reveal>
         <span class="discipline-block__num" aria-hidden="true">HLT</span>
         <h3>Healthcare</h3>
         <p>We translate clinical realities into animated stories that help patients understand complex conditions, treatments, and behavioral shifts.</p>
-        <a href="/services.php#healthcare" class="discipline-block__link">Explore Healthcare &rarr;</a>
+        <a href="/portfolio/professional-works/IronSpark/services.php#healthcare" class="discipline-block__link">Explore Healthcare &rarr;</a>
       </div>
     </div>
   </div>
@@ -91,7 +91,7 @@ require_once 'includes/header.php';
       <h2 class="cta-full__hl">Ready to<br><em>work</em><br>together?</h2>
       <div style="display:flex;flex-direction:column;gap:1.5rem;align-items:flex-start">
         <p style="font-size:1rem;line-height:1.75;color:var(--muted-2);max-width:40ch">We take a limited number of new projects each year. If you have something worth building, let's talk about it.</p>
-        <a href="/contact.php" class="btn btn--spark btn--lg">Get in Touch <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--spark btn--lg">Get in Touch <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
     </div>
   </div>

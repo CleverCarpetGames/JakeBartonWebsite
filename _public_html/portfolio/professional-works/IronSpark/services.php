@@ -39,7 +39,7 @@ require_once 'includes/header.php';
           longevity in mind. Our entertainment work lives at the intersection
           of great design and great storytelling.
         </p>
-        <a href="/contact.php" class="btn btn--spark">Pitch Your Idea &rarr;</a>
+        <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--spark">Pitch Your Idea &rarr;</a>
       </div>
       <ul class="cap-list" data-reveal>
         <li>Original IP Development</li>
@@ -94,7 +94,7 @@ require_once 'includes/header.php';
           complex clinical information through animated content that actually
           reaches patients. Empathy drives the work; clarity drives the design.
         </p>
-        <a href="/contact.php" class="btn btn--spark">Discuss Your Project &rarr;</a>
+        <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--spark">Discuss Your Project &rarr;</a>
       </div>
       <ul class="cap-list" data-reveal>
         <li>Patient Education Animation</li>
@@ -149,7 +149,7 @@ require_once 'includes/header.php';
           we own the entire process. No hand-offs, no agency markup, no
           creative dilution. Just direct, focused production work.
         </p>
-        <a href="/contact.php" class="btn btn--spark">Start a Conversation &rarr;</a>
+        <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--spark">Start a Conversation &rarr;</a>
       </div>
       <ul class="cap-list" data-reveal>
         <li>Brand Films &amp; Reels</li>
@@ -174,7 +174,7 @@ require_once 'includes/header.php';
         <p style="font-size:1rem;line-height:1.75;color:var(--muted-2);max-width:40ch">
           We're selective about what we take on. If it's the right fit, we'll know.
         </p>
-        <a href="/contact.php" class="btn btn--spark btn--lg">
+        <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--spark btn--lg">
           Reach Out
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
