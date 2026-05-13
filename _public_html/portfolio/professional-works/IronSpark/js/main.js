@@ -183,8 +183,32 @@
       let hasMoused = false;
       let lastSeekAt = 0;
 
-      bgVideo.addEventListener('loadedmetadata', () => { bgVideo.pause(); });
-      if (bgVideo.readyState >= 1) bgVideo.pause();
+      /* ── Blob-preload for lag-free reverse scrubbing ─────────
+         Fetch the full video into memory as a Blob URL so the
+         browser can seek backwards without re-decoding/buffering. */
+      const videoSrc = bgVideo.src || bgVideo.currentSrc;
+      if (videoSrc) {
+        fetch(videoSrc)
+          .then(r => r.blob())
+          .then(blob => {
+            const blobUrl = URL.createObjectURL(blob);
+            const prevTime = bgVideo.currentTime;
+            bgVideo.src = blobUrl;
+            bgVideo.load();
+            bgVideo.addEventListener('loadedmetadata', () => {
+              bgVideo.currentTime = prevTime;
+              bgVideo.pause();
+            }, { once: true });
+          })
+          .catch(() => {
+            /* Fallback: just pause normally if fetch fails */
+            bgVideo.addEventListener('loadedmetadata', () => { bgVideo.pause(); });
+            if (bgVideo.readyState >= 1) bgVideo.pause();
+          });
+      } else {
+        bgVideo.addEventListener('loadedmetadata', () => { bgVideo.pause(); });
+        if (bgVideo.readyState >= 1) bgVideo.pause();
+      }
 
       if (window.matchMedia('(pointer: coarse)').matches) {
         bgVideo.setAttribute('loop', '');
