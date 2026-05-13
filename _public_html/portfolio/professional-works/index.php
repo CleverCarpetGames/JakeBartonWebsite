@@ -80,23 +80,27 @@
                         </div>
                     </div>
 
-                    <!-- Coming Soon -->
-                    <div class="work-card reveal" style="opacity: 0.45;">
-                        <div class="work-card-img" style="display: flex; align-items: center; justify-content: center; font-size: 5rem; color: rgba(255,255,255,0.15);">+</div>
+                    <!-- IronSpark Studios -->
+                    <div class="work-card tilt-card reveal" style="cursor: pointer;" onclick="window.location.href='IronSpark/';">
+                        <div class="work-card-img">
+                            <img src="IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark Studios" style="width: 100%; height: 100%; object-fit: contain; padding: 28px; background: #0a0a0a;">
+                        </div>
                         <div class="work-card-info">
-                            <p class="eyebrow">Coming Soon</p>
-                            <h3>MORE PROJECTS</h3>
-                            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 8px 0 20px;">
-                                Additional professional client work and freelance projects
+                            <p class="eyebrow">Fellowship · Web Design &amp; Development</p>
+                            <h3>IRONSPARK STUDIOS</h3>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 8px 0 12px;">
+                                Full website redesign for Birmingham-based animation &amp; media studio IronSpark Studios. Built as an Iron Spark fellow — PHP, custom CSS, responsive design, contact API.
                             </p>
-                            <span class="btn-secondary" style="opacity: 0.4; cursor: not-allowed;">Coming Soon</span>
+                            <span class="tag tag-muted" style="display:inline-block;margin-bottom:16px">Fellowship Work</span>
+                            <br>
+                            <a href="IronSpark/" class="btn-primary" onclick="event.stopPropagation();">View Site →</a>
                         </div>
                     </div>
 
                 </div>
 
                 <div class="reveal" style="text-align: center; margin-top: 60px; color: var(--text-muted);">
-                    Professional client projects showcasing graphic design, branding, and marketing materials.
+                    Professional client projects and fellowship work spanning graphic design, branding, and web development.
                 </div>
             </div>
         </section>

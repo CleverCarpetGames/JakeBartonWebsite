@@ -110,42 +110,6 @@
                         </div>
                     </div>
 
-                    <!-- Forge -->
-                    <div class="work-card tilt-card reveal">
-                        <div class="work-card-img">
-                            <img src="../../assets/images/forge-cover.svg" alt="Forge" style="width:100%;height:100%;object-fit:cover;">
-                        </div>
-                        <div class="work-card-info">
-                            <p class="eyebrow">Next.js 14 · TypeScript · PostgreSQL · Prisma · Three.js</p>
-                            <h3>Forge — Developer Social Platform</h3>
-                            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 8px 0 12px;">
-                                A social platform where projects are posts. Built for junior developers to build in public, remix others' work, get constructive feedback, and grow with an AI mentor — not just empty likes.
-                            </p>
-                            <span class="tag tag-muted" style="display:inline-block;margin-bottom:16px">In Development</span>
-                            <br>
-                            <a href="https://forge-jakebarton.vercel.app" class="btn-primary" target="_blank">View Live →</a>
-                            &nbsp;
-                            <a href="https://github.com/jake-barton/Forge" class="btn-secondary" target="_blank">GitHub →</a>
-                        </div>
-                    </div>
-
-                    <!-- ClearDesk -->
-                    <div class="work-card tilt-card reveal">
-                        <div class="work-card-img">
-                            <img src="../../assets/images/cleardesk-cover.svg" alt="ClearDesk" style="width:100%;height:100%;object-fit:cover;">
-                        </div>
-                        <div class="work-card-info">
-                            <p class="eyebrow">Electron · React · TypeScript · Prisma · OpenAI · Stripe</p>
-                            <h3>ClearDesk — AI Task Manager</h3>
-                            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 8px 0 12px;">
-                                macOS productivity app that converts inbox chaos into a clear daily action plan. AI parses tasks from natural language and email, OCR reads invoices, and SMS delivers your morning digest.
-                            </p>
-                            <span class="tag tag-muted" style="display:inline-block;margin-bottom:16px">In Development</span>
-                            <br>
-                            <a href="https://github.com/jake-barton/ClearDesk" class="btn-secondary" target="_blank">View on GitHub →</a>
-                        </div>
-                    </div>
-
                     <!-- October (JARVIS) -->
                     <div class="work-card tilt-card reveal">
                         <div class="work-card-img">
