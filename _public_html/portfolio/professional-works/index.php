@@ -192,6 +192,49 @@
           </div>
         </a>
 
+        <!-- Veritas Social -->
+        <a href="https://www.veritassocial.co" target="_blank" class="pw-card rv" style="transition-delay:0.16s">
+          <div class="pw-card-img" style="background:#0d0d0a;">
+            <img src="../../assets/images/VeritasAsset 1.svg" alt="Veritas Social"
+                 style="object-fit:contain;padding:2.5rem;">
+          </div>
+          <div class="pw-card-body">
+            <span class="pw-card-eyebrow">Graphic Design Internship &middot; 2025&ndash;Present</span>
+            <h2 class="pw-card-title">Veritas Social</h2>
+            <p class="pw-card-desc">Event posters and promotional graphics for a Birmingham-based talent &amp; event production company &mdash; featuring Soulja Boy, LUCO, and Neeks N Brandt. 20,000+ event attendees across 13 cities.</p>
+            <div class="pw-card-footer">
+              <div class="pw-card-tags">
+                <span class="tag tag-muted">Photoshop</span>
+                <span class="tag tag-muted">Illustrator</span>
+                <span class="tag tag-muted">Event Graphics</span>
+                <span class="tag tag-muted">Internship</span>
+              </div>
+              <span class="pw-arrow">&#8599;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- TechBirmingham Sponsor AI -->
+        <a href="../web-programming/TechBirminghamSponsorAI/" class="pw-card rv" style="transition-delay:0.20s">
+          <div class="pw-card-img" style="background:#fff;">
+            <img src="../../assets/images/tb-logo.jpg" alt="TechBirmingham"
+                 style="object-fit:contain;padding:2rem;">
+          </div>
+          <div class="pw-card-body">
+            <span class="pw-card-eyebrow">Client Project &middot; 2025</span>
+            <h2 class="pw-card-title">TechBirmingham Sponsor AI</h2>
+            <p class="pw-card-desc">AI-powered sponsor matching tool built for TechBirmingham &mdash; Next.js front-end with intelligent recommendations to connect sponsors with relevant tech events.</p>
+            <div class="pw-card-footer">
+              <div class="pw-card-tags">
+                <span class="tag tag-muted">Next.js</span>
+                <span class="tag tag-muted">AI</span>
+                <span class="tag tag-muted">Client Work</span>
+              </div>
+              <span class="pw-arrow">&#8599;</span>
+            </div>
+          </div>
+        </a>
+
       </div>
 
       <div style="text-align:center;margin-top:1rem;">

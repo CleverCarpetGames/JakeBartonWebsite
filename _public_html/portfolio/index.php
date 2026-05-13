@@ -515,8 +515,20 @@
           <span class="b-arrow">↗</span>
         </a>
 
-        <!-- 10. TechBirmingham — third -->
-        <a href="web-programming/" class="b-card b-third b-accent-web" data-cat="web" id="tb-card">
+        <!-- 10. Veritas Social — qtr -->
+        <a href="professional-works/" class="b-card b-qtr b-accent-art" data-cat="art">
+          <img class="b-media" src="../assets/images/VeritasAsset 1.svg" alt="Veritas Social"
+               style="object-fit:contain;padding:1.5rem;opacity:0.9;background:#0d0d0a;">
+          <div class="b-overlay" style="background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.1) 100%)"></div>
+          <div class="b-content">
+            <span class="b-eyebrow">Internship · Event Graphics</span>
+            <h2 class="b-title">Veritas Social</h2>
+          </div>
+          <span class="b-arrow">↗</span>
+        </a>
+
+        <!-- 10b. TechBirmingham — qtr -->
+        <a href="web-programming/" class="b-card b-qtr b-accent-web" data-cat="web" id="tb-card">
           <!-- Static logo shown by default -->
           <img class="b-media" src="../assets/images/tb-logo.jpg" alt="TechBirmingham" style="object-fit:contain;padding:1.5rem;opacity:0.6;transition:opacity 0.3s;">
           <!-- Lottie loading screen shown on hover -->
@@ -668,12 +680,12 @@
           <span class="disc-num">05</span>
           <div>
             <div class="disc-title">Professional Works</div>
-            <div class="disc-sub">Paid client projects &amp; fellowship work — website redesign, brand identity, and print graphics.</div>
+            <div class="disc-sub">Paid client projects &amp; fellowship work — website redesign, event poster design (Soulja Boy, LUCO), brand identity, and AI tools.</div>
             <div class="disc-tags">
               <span class="tag tag-muted">Client Work</span>
               <span class="tag tag-muted">Web Design</span>
+              <span class="tag tag-muted">Event Graphics</span>
               <span class="tag tag-muted">Branding</span>
-              <span class="tag tag-muted">Print</span>
             </div>
           </div>
           <span class="disc-arrow">↗</span>

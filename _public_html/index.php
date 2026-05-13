@@ -342,64 +342,8 @@ $contact = [
               </div>
             </a>
 
-            <!-- Card 6 — 33 Miles Band Graphics -->
-            <a href="portfolio/professional-works/" class="wa-card" data-idx="6">
-              <img class="wa-media" src="assets/images/33miles-cover.png" alt="33Miles Band Graphics">
-              <div class="wa-grad"></div>
-              <div class="wa-content">
-                <div class="wa-tags">
-                  <span class="tag tag-muted">Client Work</span>
-                  <span class="tag tag-muted">Illustrator</span>
-                </div>
-                <h2 class="wa-title">33 Miles Band</h2>
-                <p class="wa-desc">Paid brand &amp; merchandise design for a signed Christian music group.</p>
-                <span class="wa-cta">View Project ↗</span>
-              </div>
-              <div class="wa-bar">
-                <span class="wa-bar-num">07</span>
-                <div class="wa-bar-thumb">
-                  <img src="assets/images/33miles-cover.png" alt="33Miles">
-                </div>
-                <span class="wa-bar-title">33 Miles Band Graphics</span>
-                <div class="wa-bar-tags">
-                  <span class="tag tag-muted">Client Work</span>
-                  <span class="tag tag-muted">Illustrator</span>
-                </div>
-                <span class="wa-bar-arrow">↗</span>
-              </div>
-            </a>
-
-            <!-- Card 7 — October -->
-            <a href="portfolio/web-programming/" class="wa-card" data-idx="7">
-              <img class="wa-media" src="assets/images/october-cover.svg" alt="October AI" style="object-fit:cover">
-              <div class="wa-grad"></div>
-              <div class="wa-content">
-                <div class="wa-tags">
-                  <span class="tag tag-muted">Python</span>
-                  <span class="tag tag-muted">Ollama</span>
-                  <span class="tag tag-muted">In Development</span>
-                </div>
-                <h2 class="wa-title">October</h2>
-                <p class="wa-desc">Voice-controlled macOS AI assistant running 100% locally — Whisper STT, Llama 3 via Ollama, persistent memory, and tool execution.</p>
-                <span class="wa-cta">View Project ↗</span>
-              </div>
-              <div class="wa-badge">In Development</div>
-              <div class="wa-bar">
-                <span class="wa-bar-num">07</span>
-                <div class="wa-bar-thumb">
-                  <img src="assets/images/october-cover.svg" alt="October" style="object-fit:cover;width:100%;height:100%">
-                </div>
-                <span class="wa-bar-title">October</span>
-                <div class="wa-bar-tags">
-                  <span class="tag tag-muted">Python</span>
-                  <span class="tag tag-muted">Local AI</span>
-                </div>
-                <span class="wa-bar-arrow">↗</span>
-              </div>
-            </a>
-
-            <!-- Card 8 — IronSpark Studios -->
-            <a href="portfolio/professional-works/IronSpark/showcase.php" class="wa-card" data-idx="8">
+            <!-- Card 6 — IronSpark Studios -->
+            <a href="portfolio/professional-works/IronSpark/showcase.php" class="wa-card" data-idx="6">
               <img class="wa-media" src="portfolio/professional-works/IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark Studios"
                    style="object-fit:contain;padding:3rem;background:#0a0a0a;filter:brightness(0) saturate(100%) invert(56%) sepia(75%) saturate(1200%) hue-rotate(360deg) brightness(100%);">
               <div class="wa-grad"></div>
@@ -415,7 +359,7 @@ $contact = [
                 <span class="wa-cta">View Project ↗</span>
               </div>
               <div class="wa-bar">
-                <span class="wa-bar-num">08</span>
+                <span class="wa-bar-num">07</span>
                 <div class="wa-bar-thumb" style="background:#0a0a0a;">
                   <img src="portfolio/professional-works/IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark"
                        style="object-fit:contain;width:100%;height:100%;padding:4px;filter:brightness(0) saturate(100%) invert(56%) sepia(75%) saturate(1200%) hue-rotate(360deg) brightness(100%);">
