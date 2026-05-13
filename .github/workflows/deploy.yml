@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -40,7 +40,12 @@ jobs:
               --exclude-glob '*.mp4' \
               --exclude-glob '*.mov' \
               --exclude-glob '*.webm' \
+              --exclude-glob '*.mkv' \
               --exclude-glob 'originals/' \
+              --exclude-glob 'Assets/*.mp4' \
+              --exclude-glob 'Assets/*.mov' \
+              --exclude-glob 'Assets/*.webm' \
+              --exclude-glob 'IronSpark/Assets/' \
               ./_public_html/ /domains/jakebartoncreative.com/public_html/;
             bye
           "
