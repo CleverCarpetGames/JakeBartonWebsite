@@ -14,7 +14,7 @@
   // ── Configuration ───────────────────────────────────────
   var CONFIG = {
     colors: ['#00D9FF', '#1E40AF', '#00D9FF'],  // ribbon colour stops along the trail
-    lineCount: 3,          // how many independent ribbon lines
+    lineCount: 0,          // set to 0 to disable ribbon trails (cursor dot/ring still active)
     pointCount: 60,        // trail length (number of tracked positions per line)
     maxAge: 400,           // ms before tail fades to nothing
     baseThickness: 18,     // px width of the ribbon at the head

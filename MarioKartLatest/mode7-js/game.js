@@ -1,16 +1,21 @@
 import { Settings } from './src/core/Settings.js';
 import { ScreenManager } from './src/core/ScreenManager.js';
 import { MainMenuScreen } from './src/screens/MainMenuScreen.js';
+import { MobileControls } from './src/utils/MobileControls.js';
 
 
 const canvas = document.getElementById('gameCanvas');
 canvas.width = Settings.canvas.width;
 canvas.height = Settings.canvas.height;
 
-const screenManager = new ScreenManager(canvas);
+const keys = {};
+
+// Initialise mobile controls — shares the same `keys` object as keyboard input
+const mobileControls = new MobileControls(keys, canvas);
+
+const screenManager = new ScreenManager(canvas, mobileControls);
 screenManager.setScreen(new MainMenuScreen(screenManager));
 
-const keys = {};
 window.addEventListener('keydown', function(e) {
     keys[e.key] = true;
     e.preventDefault();

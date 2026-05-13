@@ -81,6 +81,13 @@ export class AIRacer {
         this.hitDuration = 2.0; // 2 seconds of hit state
         this.hitSpinRotation = 0; // For 360 spin animation
         this.hitSpinSpeed = 0; // Spin speed during hit
+
+        // Race progress tracking — must be initialised here so placement
+        // calculations are valid from the very first frame before RaceScreen
+        // has a chance to set these externally.
+        this.currentLap = 1;
+        this.currentCheckpoint = 0;
+        this.raceFinished = false;
     }
     
     setOtherRacers(racers) {

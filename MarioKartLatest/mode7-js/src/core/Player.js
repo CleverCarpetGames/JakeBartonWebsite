@@ -98,7 +98,7 @@ export class Player {
         this.updateWaypointProgress();
     }
 
-    handleInput(keys) {
+    handleInput(keys, deltaTime) {
         // Don't allow input during hit state
         if (this.isHit) {
             this.targetSpeed = 0;

@@ -1,7 +1,8 @@
 export class ScreenManager {
-    constructor(canvas) {
+    constructor(canvas, mobileControls = null) {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');
+        this.mobileControls = mobileControls;
 
         this.currentScreen = null;
         this.gameData = {};
@@ -13,6 +14,16 @@ export class ScreenManager {
         }
 
         this.currentScreen = screen;
+
+        // Automatically switch mobile button mode based on screen type
+        if (this.mobileControls) {
+            const isRace = screen && screen.constructor && screen.constructor.name === 'RaceScreen';
+            if (isRace) {
+                this.mobileControls.setRaceMode();
+            } else {
+                this.mobileControls.setMenuMode();
+            }
+        }
 
         if (this.currentScreen && this.currentScreen.enter) {
                 this.currentScreen.enter(gameData);

@@ -274,6 +274,14 @@ export class RaceScreen {
             align: 'right'
         });
 
+        // Persistent lap counter in the top-left corner, matching the SNES original
+        const totalLaps = this.collisionManager.getTotalLaps();
+        this.hud.addNumber('lap', 8, 8, `1 ${totalLaps}`, this.numberSprite, {
+            scale: 1,
+            spacing: 0,
+            align: 'left'
+        });
+
         const itemBoxX = Settings.canvas.width - 95;
         this.hud.addSprite(
             'itemBox',
@@ -895,6 +903,11 @@ export class RaceScreen {
         this.lakituLapAnimProgress = 0;
 
         this.hud.animateElement('lakitu', 'offsetY', 0);
+
+        // Update the persistent top-left lap counter
+        const totalLaps = this.collisionManager.getTotalLaps();
+        const displayLap = Math.min(lapNumber, totalLaps);
+        this.hud.updateElement('lap', { text: `${displayLap} ${totalLaps}` });
 
         let lapSprite;
         if (lapNumber === 2) {

@@ -17,22 +17,22 @@
   var CONFIG = {
     beamCount: 8,
     colors: [
-      'rgba(30, 64, 175, ALPHA)',   // deep blue
-      'rgba(0, 217, 255, ALPHA)',   // cyan
-      'rgba(0, 217, 255, ALPHA)',   // cyan (double weight)
-      'rgba(30, 64, 175, ALPHA)',   // deep blue
-      'rgba(255, 0, 107, ALPHA)',   // pink accent
-      'rgba(0, 50, 100, ALPHA)',    // dark blue
-      'rgba(0, 217, 255, ALPHA)',   // cyan
-      'rgba(30, 64, 175, ALPHA)'    // deep blue
+      'rgba(255, 255, 255, ALPHA)',  // white
+      'rgba(200, 200, 200, ALPHA)',  // light grey
+      'rgba(255, 255, 255, ALPHA)',  // white (double weight)
+      'rgba(160, 160, 160, ALPHA)',  // mid grey
+      'rgba(230, 230, 230, ALPHA)',  // near white
+      'rgba(120, 120, 120, ALPHA)',  // darker grey
+      'rgba(200, 200, 200, ALPHA)',  // light grey
+      'rgba(255, 255, 255, ALPHA)'   // white
     ],
-    minAlpha: 0.03,
-    maxAlpha: 0.10,
+    minAlpha: 0.02,
+    maxAlpha: 0.07,
     minWidth: 60,     // px
     maxWidth: 280,    // px
     minSpeed: 0.1,    // px per frame
     maxSpeed: 0.4,
-    blur: 80,         // canvas filter blur (px)
+    blur: 90,         // canvas filter blur (px)
     fps: 50
   };
 

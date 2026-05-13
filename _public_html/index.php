@@ -398,6 +398,37 @@ $contact = [
               </div>
             </a>
 
+            <!-- Card 8 — IronSpark Studios -->
+            <a href="portfolio/professional-works/IronSpark/showcase.php" class="wa-card" data-idx="8">
+              <img class="wa-media" src="portfolio/professional-works/IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark Studios"
+                   style="object-fit:contain;padding:3rem;background:#0a0a0a;filter:brightness(0) saturate(100%) invert(56%) sepia(75%) saturate(1200%) hue-rotate(360deg) brightness(100%);">
+              <div class="wa-grad"></div>
+              <div class="wa-content">
+                <div class="wa-tags">
+                  <span class="tag tag-muted">PHP</span>
+                  <span class="tag tag-muted">CSS</span>
+                  <span class="tag tag-muted">GSAP</span>
+                  <span class="tag tag-muted">Fellowship</span>
+                </div>
+                <h2 class="wa-title">IronSpark Studios</h2>
+                <p class="wa-desc">Full website redesign for a Birmingham-based animation &amp; media studio — built as an Iron Spark Fellow with custom PHP, GSAP scroll animations, and video scrubbing.</p>
+                <span class="wa-cta">View Project ↗</span>
+              </div>
+              <div class="wa-bar">
+                <span class="wa-bar-num">08</span>
+                <div class="wa-bar-thumb" style="background:#0a0a0a;">
+                  <img src="portfolio/professional-works/IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark"
+                       style="object-fit:contain;width:100%;height:100%;padding:4px;filter:brightness(0) saturate(100%) invert(56%) sepia(75%) saturate(1200%) hue-rotate(360deg) brightness(100%);">
+                </div>
+                <span class="wa-bar-title">IronSpark Studios</span>
+                <div class="wa-bar-tags">
+                  <span class="tag tag-muted">PHP</span>
+                  <span class="tag tag-muted">Fellowship</span>
+                </div>
+                <span class="wa-bar-arrow">↗</span>
+              </div>
+            </a>
+
           </div><!-- /wa-stack -->
         </div><!-- /work-sticky -->
       </div><!-- /work-scroll-tunnel -->

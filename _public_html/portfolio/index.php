@@ -333,7 +333,7 @@
           <h1 class="rv" style="transition-delay:0.06s">All<br><em>Projects.</em></h1>
         </div>
         <div class="port-hero-right rv" style="transition-delay:0.12s">
-          <p>Games, websites, and everything in between. Three disciplines — gameplay programming, web development, and art &amp; design — built from scratch and shipped.</p>
+          <p>Games, websites, and everything in between. Five disciplines — gameplay programming, web development, art &amp; design, playable games, and professional client work — built from scratch and shipped.</p>
           <div class="port-hero-stats rv-stagger">
             <div class="port-hero-stat">
               <span class="port-hero-stat-num">20+</span>
@@ -348,7 +348,7 @@
               <span class="port-hero-stat-label">Shipped Game</span>
             </div>
             <div class="port-hero-stat">
-              <span class="port-hero-stat-num">3</span>
+              <span class="port-hero-stat-num">5</span>
               <span class="port-hero-stat-label">Disciplines</span>
             </div>
           </div>
@@ -503,7 +503,19 @@
           <span class="b-arrow">↗</span>
         </a>
 
-        <!-- 9. TechBirmingham — third -->
+        <!-- 9. IronSpark Studios — third -->
+        <a href="professional-works/IronSpark/showcase.php" class="b-card b-third b-accent-web" data-cat="web">
+          <img class="b-media" src="professional-works/IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark Studios"
+               style="object-fit:contain;padding:1.75rem;opacity:1;filter:brightness(0) saturate(100%) invert(56%) sepia(75%) saturate(1200%) hue-rotate(360deg) brightness(100%);">
+          <div class="b-overlay" style="background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.1) 100%)"></div>
+          <div class="b-content">
+            <span class="b-eyebrow">Fellowship · Web Redesign</span>
+            <h2 class="b-title">IronSpark Studios</h2>
+          </div>
+          <span class="b-arrow">↗</span>
+        </a>
+
+        <!-- 10. TechBirmingham — third -->
         <a href="web-programming/" class="b-card b-third b-accent-web" data-cat="web" id="tb-card">
           <!-- Static logo shown by default -->
           <img class="b-media" src="../assets/images/tb-logo.jpg" alt="TechBirmingham" style="object-fit:contain;padding:1.5rem;opacity:0.6;transition:opacity 0.3s;">
@@ -656,9 +668,10 @@
           <span class="disc-num">05</span>
           <div>
             <div class="disc-title">Professional Works</div>
-            <div class="disc-sub">Paid client projects — band graphics, pressure washing brand, apparel campaigns.</div>
+            <div class="disc-sub">Paid client projects &amp; fellowship work — website redesign, brand identity, and print graphics.</div>
             <div class="disc-tags">
               <span class="tag tag-muted">Client Work</span>
+              <span class="tag tag-muted">Web Design</span>
               <span class="tag tag-muted">Branding</span>
               <span class="tag tag-muted">Print</span>
             </div>
