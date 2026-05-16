@@ -207,6 +207,36 @@
       }, { threshold: 0 });
       heroObserver.observe(qs('.hero') || bgScene);
 
+      // When user leaves the tab the browser may throttle or suspend
+      // video playback / seeking. When they return, reload or reset
+      // timing so scrubTick can resume updating currentTime immediately.
+      function handleVisibilityChange() {
+        if (document.visibilityState === 'visible') {
+          // If metadata isn't ready, trigger a load so currentTime seeks are allowed
+          if (bgVideo.readyState < 1) {
+            try { bgVideo.load(); } catch (e) {}
+          }
+          // Reset timing throttle so the first seek happens right away
+          lastSeekAt = 0;
+          // If on a coarse pointer we want the video to play (mobile), otherwise keep paused
+          if (window.matchMedia('(pointer: coarse)').matches) {
+            bgVideo.setAttribute('loop', '');
+            bgVideo.play().catch(() => {});
+          } else {
+            // Ensure paused so scrubbing (setting currentTime) is authoritative
+            try { bgVideo.pause(); } catch (e) {}
+          }
+        }
+      }
+      document.addEventListener('visibilitychange', handleVisibilityChange, false);
+      // Also on window focus (some browsers don't fire visibilitychange reliably)
+      window.addEventListener('focus', handleVisibilityChange, false);
+      // Handle bfcache restore (back/forward navigation) — persisted pages skip
+      // visibilitychange, so pageshow with persisted:true is the only reliable hook.
+      window.addEventListener('pageshow', e => {
+        if (e.persisted) handleVisibilityChange();
+      }, false);
+
       (function scrubTick() {
         requestAnimationFrame(scrubTick);
         if (!heroVisible) return; // hero scrolled away — skip all work
