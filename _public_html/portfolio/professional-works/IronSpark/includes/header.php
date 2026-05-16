@@ -21,9 +21,9 @@ require_once __DIR__ . '/config.php';
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-  <!-- GSAP (synchronous so main.js can use it immediately) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- GSAP — defer so they don't block HTML parsing; executes in order before main.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <!-- Styles -->
   <link rel="stylesheet" href="/portfolio/professional-works/IronSpark/css/style.css">
 </head>
@@ -44,14 +44,13 @@ require_once __DIR__ . '/config.php';
 <!-- Nav -->
 <nav class="nav" id="mainNav" aria-label="Main navigation"
      data-cursor-theme="<?= (isset($bodyClass) && str_contains($bodyClass, 'has-hero')) ? 'light' : 'dark' ?>">
-  <a href="/portfolio/professional-works/IronSpark/" class="nav__logo" aria-label="IronSpark Studios — Home">
+  <a href="/" class="nav__logo" aria-label="IronSpark Studios — Home">
     <img src="/portfolio/professional-works/IronSpark/Assets/IronsparkLogo.webp" alt="IronSpark Studios logo" width="120" height="26">
   </a>
 
   <ul class="nav__links" role="list">
     <li><a href="/portfolio/professional-works/IronSpark/about.php"    <?= $current==='about'    ? 'aria-current="page"' : '' ?>>About</a></li>
     <li><a href="/portfolio/professional-works/IronSpark/services.php" <?= $current==='services' ? 'aria-current="page"' : '' ?>>Services</a></li>
-    <li><a href="/portfolio/professional-works/IronSpark/work.php"     <?= $current==='work'     ? 'aria-current="page"' : '' ?>>Work</a></li>
     <li><a href="/portfolio/professional-works/IronSpark/contact.php"  <?= $current==='contact'  ? 'aria-current="page"' : '' ?>>Contact</a></li>
   </ul>
 
@@ -73,7 +72,6 @@ require_once __DIR__ . '/config.php';
   <ul class="nav__mobile-links" role="list">
     <li><a href="/portfolio/professional-works/IronSpark/about.php"    <?= $current==='about'    ? 'aria-current="page"' : '' ?>>About</a></li>
     <li><a href="/portfolio/professional-works/IronSpark/services.php" <?= $current==='services' ? 'aria-current="page"' : '' ?>>Services</a></li>
-    <li><a href="/portfolio/professional-works/IronSpark/work.php"     <?= $current==='work'     ? 'aria-current="page"' : '' ?>>Work</a></li>
     <li><a href="/portfolio/professional-works/IronSpark/contact.php"  <?= $current==='contact'  ? 'aria-current="page"' : '' ?>>Contact</a></li>
   </ul>
   <div class="nav__mobile-footer">

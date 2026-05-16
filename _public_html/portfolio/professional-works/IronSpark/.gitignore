@@ -1,6 +1,8 @@
 .DS_Store
 node_modules/
 
-# All video files — uploaded directly to Hostinger, not via git/FTP deploy
+# Raw source footage — too large for git
 Assets/*.mov
+# Keep hero-bg-scrub.mp4 (tracked), ignore all other mp4s
 Assets/*.mp4
+!Assets/hero-bg-scrub.mp4

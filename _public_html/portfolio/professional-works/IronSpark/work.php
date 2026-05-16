@@ -1,146 +1,141 @@
 <?php
-$page_title       = 'Our Work';
-$page_description = 'Selected animation, healthcare, and production projects from IronSpark Studios.';
-require_once 'includes/header.php';
+// Portfolio coming soon — redirect to Services until real case studies are ready
+header('Location: /services.php', true, 301);
+exit;
 ?>
 
 <!-- PAGE HERO -->
-<section class="page-hero">
+<section class="page-hero" data-cursor-theme="dark">
   <div class="container">
-    <div class="page-hero__inner">
-      <span class="eyebrow" data-reveal>Portfolio</span>
-      <h1 class="page-hero__hl" data-reveal>
-        Selected<br><em>Projects.</em>
-      </h1>
-      <p class="page-hero__sub" data-reveal>
-        A cross-section of our work across entertainment and healthcare.
-        Each project starts with a story problem. This is how we solve them.
-      </p>
-    </div>
+    <span class="eyebrow js-reveal">Selected Projects</span>
+    <h1 class="page-hero__hl js-reveal">Work that<br>moves<br><em>people.</em></h1>
+    <p class="page-hero__sub js-reveal">Entertainment. Healthcare. Always with purpose.</p>
   </div>
 </section>
 
-<!-- FILTER -->
-<div class="work-filter-bar">
+<!-- FEATURED IMAGE -->
+<section class="section" style="padding-top:0" data-cursor-theme="dark">
   <div class="container">
-    <div class="work-filter" role="group" aria-label="Filter by category">
-      <button class="wf-btn is-active" data-filter="all">All</button>
-      <button class="wf-btn" data-filter="entertainment">Entertainment</button>
-      <button class="wf-btn" data-filter="healthcare">Healthcare</button>
-      <button class="wf-btn" data-filter="production">Production</button>
-    </div>
-  </div>
-</div>
-
-<!-- WORK TABLE -->
-<section class="section section--bt">
-  <div class="container">
-    <div class="work-table">
-
-      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="entertainment" data-preview="">
-        <span class="work-row__id">IS&mdash;001</span>
-        <span class="work-row__title">The Ember Series</span>
-        <span class="work-row__tags">Entertainment &mdash; Original IP &mdash; 2D Animation</span>
-        <span class="work-row__year">2024</span>
-        <span class="work-row__arrow">&#8599;</span>
-      </a>
-
-      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="healthcare" data-preview="">
-        <span class="work-row__id">IS&mdash;002</span>
-        <span class="work-row__title">Lifeline Patient Portal</span>
-        <span class="work-row__tags">Healthcare &mdash; Motion Design &mdash; Patient Education</span>
-        <span class="work-row__year">2024</span>
-        <span class="work-row__arrow">&#8599;</span>
-      </a>
-
-      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="entertainment" data-preview="">
-        <span class="work-row__id">IS&mdash;003</span>
-        <span class="work-row__title">Wonderforge</span>
-        <span class="work-row__tags">Entertainment &mdash; Visual Development &mdash; Series Concept</span>
-        <span class="work-row__year">2023</span>
-        <span class="work-row__arrow">&#8599;</span>
-      </a>
-
-      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="healthcare" data-preview="">
-        <span class="work-row__id">IS&mdash;004</span>
-        <span class="work-row__title">ClearPath</span>
-        <span class="work-row__tags">Healthcare &mdash; Behavior Change &mdash; Script &amp; Animation</span>
-        <span class="work-row__year">2023</span>
-        <span class="work-row__arrow">&#8599;</span>
-      </a>
-
-      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="production" data-preview="">
-        <span class="work-row__id">IS&mdash;005</span>
-        <span class="work-row__title">Kinetic Brand Rebrand</span>
-        <span class="work-row__tags">Production &mdash; Brand Film &mdash; Motion System</span>
-        <span class="work-row__year">2023</span>
-        <span class="work-row__arrow">&#8599;</span>
-      </a>
-
-      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="entertainment" data-preview="">
-        <span class="work-row__id">IS&mdash;006</span>
-        <span class="work-row__title">Hollow &amp; the Haunt</span>
-        <span class="work-row__tags">Entertainment &mdash; Short Film &mdash; Character Animation</span>
-        <span class="work-row__year">2022</span>
-        <span class="work-row__arrow">&#8599;</span>
-      </a>
-
-      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="healthcare" data-preview="">
-        <span class="work-row__id">IS&mdash;007</span>
-        <span class="work-row__title">PediatricPath</span>
-        <span class="work-row__tags">Healthcare &mdash; Pediatric Education &mdash; 2D</span>
-        <span class="work-row__year">2022</span>
-        <span class="work-row__arrow">&#8599;</span>
-      </a>
-
-      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="production" data-preview="">
-        <span class="work-row__id">IS&mdash;008</span>
-        <span class="work-row__title">Roots &amp; Routes</span>
-        <span class="work-row__tags">Production &mdash; Documentary Motion &mdash; Title Design</span>
-        <span class="work-row__year">2022</span>
-        <span class="work-row__arrow">&#8599;</span>
-      </a>
-
-      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="entertainment" data-preview="">
-        <span class="work-row__id">IS&mdash;009</span>
-        <span class="work-row__title">Neon Valley</span>
-        <span class="work-row__tags">Entertainment &mdash; Original IP &mdash; Pilot</span>
-        <span class="work-row__year">2021</span>
-        <span class="work-row__arrow">&#8599;</span>
-      </a>
-
-      <a href="/portfolio/professional-works/IronSpark/work.php" class="work-row" data-cat="healthcare" data-preview="">
-        <span class="work-row__id">IS&mdash;010</span>
-        <span class="work-row__title">Meridian Health Network</span>
-        <span class="work-row__tags">Healthcare &mdash; Institutional Brand &mdash; Motion</span>
-        <span class="work-row__year">2021</span>
-        <span class="work-row__arrow">&#8599;</span>
-      </a>
-
-    </div>
+    <img loading="lazy" src="/portfolio/professional-works/IronSpark/Assets/rs=w-2320,h-1223.webp"
+         alt="IronSpark Studios — Featured Work"
+         class="work-hero-img js-reveal">
   </div>
 </section>
 
-<!-- floating preview -->
-<div class="work-preview" id="workPreview" aria-hidden="true">
-  <img src="" alt="" id="workPreviewImg">
-</div>
-
-<!-- CLOSING CTA -->
-<section class="cta-full">
+<!-- WORK INTRO -->
+<section class="section" data-cursor-theme="dark">
   <div class="container">
-    <div class="cta-full__inner" data-reveal>
-      <h2 class="cta-full__hl">
-        See your<br><em>project</em><br>here.
-      </h2>
-      <div style="display:flex;flex-direction:column;gap:1.5rem;align-items:flex-start">
-        <p style="font-size:1rem;line-height:1.75;color:var(--muted-2);max-width:38ch">
-          We work with a carefully chosen set of clients each year. Reach out and let's see if we're the right fit.
-        </p>
-        <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--spark btn--lg">
-          Start a Project
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    <div class="intro-grid">
+      <div class="js-reveal">
+        <h2 class="intro-grid__hl">Two divisions. Dozens of stories.<br>All made with intention.</h2>
+        <p class="intro-grid__body">We're a Birmingham-based animation and media studio working across entertainment and healthcare. From original IP to patient education, we design thoughtful, visually engaging experiences that resonate with real people.</p>
+        <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--spark" style="margin-top:2rem">
+          <span>Start Your Project</span>
+          <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12L12 1M12 1H4M12 1v8"/></svg>
         </a>
+      </div>
+      <div class="js-reveal">
+        <div class="work-stat-grid">
+          <div class="work-stat">
+            <span class="stat-row__num">30+</span>
+            <span class="stat-row__label">Projects Delivered</span>
+          </div>
+          <div class="work-stat">
+            <span class="stat-row__num">4+</span>
+            <span class="stat-row__label">Years Active</span>
+          </div>
+          <div class="work-stat">
+            <span class="stat-row__num">2</span>
+            <span class="stat-row__label">Divisions</span>
+          </div>
+          <div class="work-stat">
+            <span class="stat-row__num">100%</span>
+            <span class="stat-row__label">In-house Production</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTERTAINMENT WORK -->
+<section class="section" data-cursor-theme="dark">
+  <div class="container">
+    <div class="section-header js-reveal">
+      <span class="eyebrow">Entertainment Division</span>
+      <a href="/portfolio/professional-works/IronSpark/services.php#entertainment" class="link-arrow">All Services <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12L12 1M12 1H4M12 1v8"/></svg></a>
+    </div>
+    <div class="work-grid js-reveal">
+      <div class="work-card">
+        <div class="work-card__img-wrap">
+          <img loading="lazy" src="/portfolio/professional-works/IronSpark/Assets/rs=w-776,h-388,cg-true-3.webp" alt="Entertainment project" class="work-card__img">
+          <span class="division-pill division-pill--ent work-card__pill">Entertainment</span>
+        </div>
+        <div class="work-card__body">
+          <h3 class="work-card__title">Animated Series Development</h3>
+          <p class="work-card__desc">Original animated content, visual development, and storytelling for kids and families.</p>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-card__img-wrap">
+          <img loading="lazy" src="/portfolio/professional-works/IronSpark/Assets/rs=w-776,h-388,cg-true-2.webp" alt="Entertainment project" class="work-card__img">
+          <span class="division-pill division-pill--ent work-card__pill">Entertainment</span>
+        </div>
+        <div class="work-card__body">
+          <h3 class="work-card__title">Character &amp; World Building</h3>
+          <p class="work-card__desc">Deep visual development, IP strategy, and character design for original properties.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEALTHCARE WORK -->
+<section class="section about-dark" data-cursor-theme="light">
+  <div class="container">
+    <div class="section-header js-reveal">
+      <span class="eyebrow" style="color:rgba(247,242,233,.35)">Healthcare Division</span>
+      <a href="/portfolio/professional-works/IronSpark/services.php#healthcare" class="link-arrow" style="color:rgba(247,242,233,.55)">All Services <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12L12 1M12 1H4M12 1v8"/></svg></a>
+    </div>
+    <div class="work-grid js-reveal">
+      <div class="work-card work-card--dark">
+        <div class="work-card__img-wrap">
+          <img loading="lazy" src="/portfolio/professional-works/IronSpark/Assets/rs=w-776,h-388,cg-true.webp" alt="Healthcare project" class="work-card__img">
+          <span class="division-pill division-pill--health work-card__pill">Healthcare</span>
+        </div>
+        <div class="work-card__body">
+          <h3 class="work-card__title" style="color:var(--cream)">Patient Education Content</h3>
+          <p class="work-card__desc" style="color:rgba(247,242,233,.55)">Engaging, empathetic animations explaining procedures and improving patient outcomes.</p>
+        </div>
+      </div>
+      <div class="work-card work-card--dark">
+        <div class="work-card__img-wrap">
+          <img loading="lazy" src="/portfolio/professional-works/IronSpark/Assets/rs=w-800,cg-true.webp" alt="Healthcare project" class="work-card__img">
+          <span class="division-pill division-pill--health work-card__pill">Healthcare</span>
+        </div>
+        <div class="work-card__body">
+          <h3 class="work-card__title" style="color:var(--cream)">Behavior-Change Campaigns</h3>
+          <p class="work-card__desc" style="color:rgba(247,242,233,.55)">Content designed to shift behaviors — grounded in evidence, built for human beings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-cta" data-cursor-theme="light">
+  <div class="container">
+    <div class="manifesto-cta__inner js-reveal">
+      <div class="manifesto-cta__text-col">
+        <h2 class="manifesto__text" style="opacity:1;transform:none">Your story<br><em>belongs here.</em></h2>
+        <p class="page-cta__note">We're always looking for projects worth doing. Tell us what you're building.</p>
+      </div>
+      <div class="manifesto-cta__action" style="opacity:1;transform:none">
+        <a href="/portfolio/professional-works/IronSpark/contact.php" class="btn btn--orange btn--lg" data-cursor-theme="on-orange">
+          <span>Let's Talk</span>
+          <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 12L12 1M12 1H4M12 1v8"/></svg>
+        </a>
+        <p class="cta-block__note">Mon – Fri, 9am – 5pm CT</p>
       </div>
     </div>
   </div>

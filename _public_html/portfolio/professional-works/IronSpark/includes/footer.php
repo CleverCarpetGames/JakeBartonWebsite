@@ -14,10 +14,9 @@
       <div class="footer__col">
         <h4>Navigate</h4>
         <ul>
-          <li><a href="/portfolio/professional-works/IronSpark/">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="/portfolio/professional-works/IronSpark/about.php">About</a></li>
           <li><a href="/portfolio/professional-works/IronSpark/services.php">Services</a></li>
-          <li><a href="/portfolio/professional-works/IronSpark/work.php">Work</a></li>
           <li><a href="/portfolio/professional-works/IronSpark/contact.php">Contact</a></li>
         </ul>
       </div>
@@ -45,8 +44,8 @@
     <div class="footer__bottom">
       <p class="footer__copy">&copy; <?= date('Y') ?> IronSpark Studios LLC. All rights reserved.</p>
       <nav class="footer__legal" aria-label="Legal">
-        <a href="/portfolio/professional-works/IronSpark/privacy-policy.php">Privacy</a>
-        <a href="/portfolio/professional-works/IronSpark/terms.php">Terms</a>
+        <a href="/privacy-policy.php">Privacy</a>
+        <a href="/terms.php">Terms</a>
       </nav>
     </div>
   </div>

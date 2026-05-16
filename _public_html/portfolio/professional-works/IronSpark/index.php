@@ -4,8 +4,8 @@ $pageDesc  = 'IronSpark Studios — Birmingham, AL animation and media studio. O
 $bodyClass = 'home-page has-hero';
 require_once 'includes/header.php';
 
-$entVideo = '/portfolio/professional-works/IronSpark/Assets/' . rawurlencode('Gaming Stock Footage Medium shot of young men beta testing video game  4K  HD - Royalty Free Music Video & Template (1080p, h264, youtube).mp4');
-$hcVideo  = '/portfolio/professional-works/IronSpark/Assets/' . rawurlencode('4K Hospital Notes  Clipboard  Sick  Patient  Free Stock Video Footage [ No Copyright ] - HD Video Library - No Copyright Footage (1080p, h264, youtube).mp4');
+$entVideo = '/Assets/' . rawurlencode('Gaming Stock Footage Medium shot of young men beta testing video game  4K  HD - Royalty Free Music Video & Template (1080p, h264, youtube).mp4');
+$hcVideo  = '/Assets/' . rawurlencode('4K Hospital Notes  Clipboard  Sick  Patient  Free Stock Video Footage [ No Copyright ] - HD Video Library - No Copyright Footage (1080p, h264, youtube).mp4');
 ?>
 
 <!-- HERO -->

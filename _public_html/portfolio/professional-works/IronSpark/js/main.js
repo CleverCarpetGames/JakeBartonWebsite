@@ -35,6 +35,8 @@
     (function tick() {
       rx = lerp(rx, mx, 0.13);
       ry = lerp(ry, my, 0.13);
+      // Read offsetWidth each frame — it's a single cached layout value
+      // and must be current so hover-scale transitions don't offset the ring.
       const rr = ring.offsetWidth / 2;
       ring.style.transform = `translate(${rx - rr}px, ${ry - rr}px)`;
       requestAnimationFrame(tick);
@@ -183,32 +185,8 @@
       let hasMoused = false;
       let lastSeekAt = 0;
 
-      /* ── Blob-preload for lag-free reverse scrubbing ─────────
-         Fetch the full video into memory as a Blob URL so the
-         browser can seek backwards without re-decoding/buffering. */
-      const videoSrc = bgVideo.src || bgVideo.currentSrc;
-      if (videoSrc) {
-        fetch(videoSrc)
-          .then(r => r.blob())
-          .then(blob => {
-            const blobUrl = URL.createObjectURL(blob);
-            const prevTime = bgVideo.currentTime;
-            bgVideo.src = blobUrl;
-            bgVideo.load();
-            bgVideo.addEventListener('loadedmetadata', () => {
-              bgVideo.currentTime = prevTime;
-              bgVideo.pause();
-            }, { once: true });
-          })
-          .catch(() => {
-            /* Fallback: just pause normally if fetch fails */
-            bgVideo.addEventListener('loadedmetadata', () => { bgVideo.pause(); });
-            if (bgVideo.readyState >= 1) bgVideo.pause();
-          });
-      } else {
-        bgVideo.addEventListener('loadedmetadata', () => { bgVideo.pause(); });
-        if (bgVideo.readyState >= 1) bgVideo.pause();
-      }
+      bgVideo.addEventListener('loadedmetadata', () => { bgVideo.pause(); });
+      if (bgVideo.readyState >= 1) bgVideo.pause();
 
       if (window.matchMedia('(pointer: coarse)').matches) {
         bgVideo.setAttribute('loop', '');
@@ -222,7 +200,17 @@
 
       window.addEventListener('scroll', () => { scrollY = window.scrollY; }, { passive: true });
 
+      // Stop scrubbing once hero is fully off-screen — saves CPU on long pages
+      let heroVisible = true;
+      const heroObserver = new IntersectionObserver(([entry]) => {
+        heroVisible = entry.isIntersecting;
+      }, { threshold: 0 });
+      heroObserver.observe(qs('.hero') || bgScene);
+
       (function scrubTick() {
+        requestAnimationFrame(scrubTick);
+        if (!heroVisible) return; // hero scrolled away — skip all work
+
         lx = lerp(lx, mx, 0.05);
 
         if (scrollY !== lastScrollY) {
@@ -248,8 +236,6 @@
           const ff = Math.floor((t % 1) * 24).toString().padStart(2, '0');
           tcEl.textContent = `${mm}:${ss}:${ff}`;
         }
-
-        requestAnimationFrame(scrubTick);
       })();
     }
 
@@ -353,16 +339,20 @@
       });
     });
 
-    /* Section headings: clip-path slide-up reveal */
-    qsa('.section-title, .eyebrow').forEach((el, i) => {
-      gsap.from(el, {
-        clipPath: 'inset(0 0 100% 0)',
-        y: 24, opacity: 0,
-        duration: 0.85, ease: 'power3.out',
-        delay: i * 0.08,
-        scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+    /* Section headings: clip-path slide-up reveal — batched, not one ST per element */
+    const headings = qsa('.section-title, .eyebrow');
+    if (headings.length) {
+      ScrollTrigger.batch(headings, {
+        onEnter: batch => gsap.from(batch, {
+          clipPath: 'inset(0 0 100% 0)',
+          y: 24, opacity: 0,
+          duration: 0.85, ease: 'power3.out',
+          stagger: 0.07
+        }),
+        start: 'top 88%',
+        once: true,
       });
-    });
+    }
 
     /* Stats / numbers pop in */
     qsa('[data-count]').forEach(el => {
@@ -421,6 +411,23 @@
       start: 'top 88%',
       once: true,
     });
+
+    // Inner-page .js-reveal — lightweight IntersectionObserver approach
+    // (avoids creating one ScrollTrigger per element on content pages)
+    const revealEls = qsa('.js-reveal');
+    if (revealEls.length) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          // Stagger siblings that enter together
+          const delay = parseFloat(el.dataset.revealDelay || 0);
+          setTimeout(() => el.classList.add('visible'), delay);
+          io.unobserve(el);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+      revealEls.forEach(el => io.observe(el));
+    }
 
     // Stagger work rows
     const rows = qsa('.work-row');
@@ -482,6 +489,7 @@
     if (!preview || !img) return;
 
     let tx = 0, ty = 0, cx = 0, cy = 0;
+    let previewActive = false;
 
     qsa('.work-row[data-preview]').forEach(row => {
       row.addEventListener('mouseenter', () => {
@@ -489,9 +497,11 @@
         if (!src) return;
         img.src = src;
         preview.classList.add('show');
+        previewActive = true;
       });
       row.addEventListener('mouseleave', () => {
         preview.classList.remove('show');
+        previewActive = false;
       });
     });
 
@@ -501,11 +511,12 @@
     });
 
     (function animPreview() {
+      requestAnimationFrame(animPreview);
+      if (!previewActive) return; // only lerp when preview is shown
       cx = lerp(cx, tx, 0.1);
       cy = lerp(cy, ty, 0.1);
       preview.style.left = cx + 'px';
       preview.style.top  = cy + 'px';
-      requestAnimationFrame(animPreview);
     })();
   }
 
@@ -542,7 +553,7 @@
       btn.disabled = true;
 
       try {
-        const res  = await fetch('/send-mail.php', { method: 'POST', body: new FormData(form) });
+        const res  = await fetch('/portfolio/professional-works/IronSpark/send-mail.php', { method: 'POST', body: new FormData(form) });
         const data = await res.json();
         if (data.success) {
           status.className = 'form__msg ok';
@@ -628,8 +639,7 @@
   /* ── GSAP + ScrollTrigger registration ───────────────────── */
   /* ── film grain ───────────────────────────────────────────── */
   function initGrain() {
-    // Generate a 256×256 noise tile with ~9% opacity so it
-    // blends as a background layer rather than a floating overlay.
+    // Generate a 256×256 noise tile
     const size = 256;
     const c   = document.createElement('canvas');
     c.width   = c.height = size;
@@ -638,29 +648,25 @@
     const d32 = new Uint32Array(img.data.buffer);
     for (let i = 0; i < d32.length; i++) {
       const v = (Math.random() * 255) | 0;
-      // alpha ≈ 22/255 = ~8.6% — semi-transparent grain
-      d32[i] = (22 << 24) | (v << 16) | (v << 8) | v;
+      d32[i] = (22 << 24) | (v << 16) | (v << 8) | v; // ~8.6% alpha
     }
     ctx.putImageData(img, 0, 0);
     const url = c.toDataURL('image/png');
 
-    // Bake grain directly into each surface as a background-image layer.
-    // Because CSS background-image is always rendered BELOW the element's
-    // child content, images and videos naturally paint on top — no grain
-    // touches them regardless of stacking context or GSAP transforms.
-    const style = document.createElement('style');
-    style.textContent = `
-      body,
-      .hero,
-      .divisions,
-      .orange-bar,
-      .manifesto-cta {
-        background-image: url("${url}");
-        background-size: 256px 256px;
-        background-repeat: repeat;
-      }
-    `;
-    document.head.appendChild(style);
+    // KEY PERF FIX: use a single position:fixed overlay instead of
+    // background-image on body/sections. Fixed elements are composited
+    // once by the GPU and never repaint on scroll — zero cost.
+    const grain = document.createElement('div');
+    grain.setAttribute('aria-hidden', 'true');
+    grain.style.cssText = [
+      'position:fixed', 'inset:0', 'z-index:9998',
+      'pointer-events:none', 'user-select:none',
+      `background-image:url("${url}")`,
+      'background-size:256px 256px',
+      'background-repeat:repeat',
+      'opacity:1',
+    ].join(';');
+    document.body.appendChild(grain);
   }
 
   /* ── button arrow animations ─────────────────────────────── */
