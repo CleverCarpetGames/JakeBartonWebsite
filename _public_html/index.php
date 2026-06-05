@@ -57,42 +57,36 @@ $contact = [
       <!-- Top meta row -->
       <div class="hero-meta">
         <span class="hero-eyebrow-tag"><?php echo $content['hero_eyebrow']; ?></span>
-        <span class="hero-location-tag">Birmingham, AL</span>
+        <div class="hero-meta-socials">
+          <a href="https://github.com/jake-barton" target="_blank" rel="noopener" class="hero-social-link" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23A11.52 11.52 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.807 5.625-5.479 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/jakebartoncreative" target="_blank" rel="noopener" class="hero-social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
       </div>
 
-      <!-- The name — takes up the full visual weight -->
+      <!-- The name -->
       <div class="hero-name-block">
         <div class="xl-reveal"><span><?php echo explode(' ', $content['name'])[0]; ?></span></div>
         <div class="xl-reveal" style="transition-delay:0.08s"><span><?php echo explode(' ', $content['name'])[1]; ?></span></div>
       </div>
 
-      <!-- Social icons under name -->
-      <div class="hero-social-icons">
-        <a href="https://github.com/jake-barton" target="_blank" rel="noopener" class="hero-social-link" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23A11.52 11.52 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.807 5.625-5.479 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/jakebartoncreative" target="_blank" rel="noopener" class="hero-social-link" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-          </svg>
-        </a>
-      </div>
+      <!-- Divider line -->
+      <div class="hero-divider"></div>
+
+      <!-- Footer row: role + CTAs -->
       <div class="hero-bottom">
         <div class="hero-bottom-left">
-          <p class="hero-tagline">
-            Game developer building<br>
-            <em class="rotating-text" data-words='<?php echo json_encode($content['hero_rotating_words']); ?>' data-interval="2800"><?php echo $content['hero_rotating_words'][0]; ?></em><br>
-            from game engines to the browser.
-          </p>
-          <div class="hero-cta">
-            <a href="/portfolio/" class="btn btn-primary">See My Work</a>
-            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-          </div>
+          <p class="hero-role">Gameplay Programmer &amp; Technical Designer</p>
+          <p class="hero-context">Junior · Samford University · Lead Programmer, Game Design Studio</p>
         </div>
         <div class="hero-bottom-right">
-          <p class="hero-subtitle"><?php echo $content['hero_subtitle']; ?></p>
+          <div class="hero-cta">
+            <a href="/portfolio/" class="btn btn-primary">See My Work →</a>
+            <a href="assets/Jake%20Barton%20-%20Resume.pdf" download class="btn btn-ghost">Resume ↓</a>
+          </div>
           <div class="hero-status-badge">
             <span class="hero-status-pulse"></span>Open to Work — Birmingham, AL
           </div>
@@ -647,7 +641,7 @@ $contact = [
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 2rem var(--spacing-md) 5rem;
+      padding: 2rem var(--spacing-md) 4rem;
       max-width: 1400px;
       margin: 0 auto;
       width: 100%;
@@ -662,29 +656,36 @@ $contact = [
     .hero-eyebrow-tag {
       font-family: var(--font-mono);
       font-size: 0.6rem;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-faint);
       border: 1px solid var(--border);
       padding: 0.3rem 0.7rem;
     }
-    .hero-location-tag {
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-faint);
+    .hero-meta-socials {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
     }
+    .hero-social-link {
+      display: flex; align-items: center; justify-content: center;
+      width: 30px; height: 30px;
+      border: 1px solid var(--border);
+      color: var(--text-faint);
+      background: transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .hero-social-link:hover { color: var(--accent); border-color: var(--accent); }
 
     /* The name */
-    .hero-name-block { margin-bottom: clamp(0.5rem, 1.5vh, 1.5rem); }
+    .hero-name-block { margin-bottom: 0; }
     .hero-name-block .xl-reveal { display: block; overflow: hidden; line-height: 0.88; }
     .hero-name-block .xl-reveal span {
       display: block;
       font-family: var(--font-display);
       font-size: clamp(5rem, 16vw, 16rem);
       font-weight: 400;
-      letter-spacing: 0.02em;
+      letter-spacing: -0.01em;
       text-transform: uppercase;
       line-height: 0.88;
       color: var(--text);
@@ -694,62 +695,54 @@ $contact = [
     }
     .hero-name-block .xl-reveal.is-visible span { transform: translateY(0); opacity: 1; }
 
-    /* Social icons */
-    .hero-social-icons {
-      display: flex; align-items: center; gap: 0.5rem;
-      margin-bottom: clamp(1rem, 2.5vh, 2rem);
-      opacity: 0; transform: translateY(8px);
-      transition: opacity 0.6s ease 0.35s, transform 0.6s ease 0.35s;
+    /* Divider */
+    .hero-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin: 1.5rem 0;
     }
-    .hero-social-icons.is-visible { opacity: 1; transform: none; }
-    .hero-social-link {
-      display: flex; align-items: center; justify-content: center;
-      width: 34px; height: 34px;
-      border: 1px solid var(--border);
-      color: var(--text-faint);
-      background: transparent;
-      transition: color 0.15s, border-color 0.15s;
-    }
-    .hero-social-link:hover { color: var(--accent); border-color: var(--accent); }
 
+    /* Footer row */
     .hero-bottom {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem 4rem;
+      grid-template-columns: 1fr auto;
+      gap: 2rem 3rem;
       width: 100%;
       align-items: end;
     }
-    .hero-tagline {
-      font-size: clamp(0.9rem, 1.8vw, 1.1rem);
-      line-height: 1.7;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
+    .hero-role {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 0.4rem;
     }
-    .hero-tagline em {
-      font-style: normal;
-      color: var(--accent);
+    .hero-context {
       font-family: var(--font-mono);
-      font-size: 0.95em;
-    }
-    .hero-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-    .hero-subtitle {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
       color: var(--text-faint);
-      line-height: 1.85;
-      margin-bottom: 1.25rem;
-      letter-spacing: 0.01em;
+      text-transform: uppercase;
     }
+    .hero-bottom-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1rem;
+    }
+    .hero-cta { display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: flex-end; }
     .hero-status-badge {
       display: inline-flex; align-items: center; gap: 0.5rem;
       font-family: var(--font-mono);
-      font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+      font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase;
       color: var(--text-faint);
       border: 1px solid var(--border);
       padding: 0.3rem 0.8rem;
     }
     .hero-status-pulse {
-      width: 6px; height: 6px; background: #3ddb74;
+      width: 6px; height: 6px; background: #3ddb74; flex-shrink: 0;
       animation: pulse-green 2s ease infinite;
     }
     @keyframes pulse-green {
@@ -777,7 +770,7 @@ $contact = [
     }
     .stats-bar-label {
       font-family: var(--font-mono);
-      font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+      font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase;
       color: var(--text-faint);
     }
 
@@ -791,7 +784,7 @@ $contact = [
     }
     .bold-ticker-track span {
       font-family: var(--font-mono); font-size: 0.62rem;
-      font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase;
+      font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--text-faint); flex-shrink: 0;
     }
     .bold-ticker-track .bull { color: var(--accent); opacity: 0.5; }
@@ -816,12 +809,12 @@ $contact = [
     }
     .work-label-text {
       font-family: var(--font-mono); font-size: 0.62rem;
-      font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase;
+      font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--text-faint); flex: 1;
     }
     .work-label-link {
       font-family: var(--font-mono); font-size: 0.62rem;
-      letter-spacing: 0.1em; text-transform: uppercase;
+      letter-spacing: 0.04em; text-transform: uppercase;
       color: var(--text-faint); transition: color 0.18s;
     }
     .work-label-link:hover { color: var(--accent); }
@@ -892,14 +885,14 @@ $contact = [
     }
     .wa-cta {
       font-family: var(--font-mono); font-size: 0.68rem;
-      letter-spacing: 0.16em; text-transform: uppercase;
+      letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--accent); margin-top: 0.5rem; transition: letter-spacing 0.3s;
     }
-    .wa-card.is-active:hover .wa-cta { letter-spacing: 0.24em; }
+    .wa-card.is-active:hover .wa-cta { letter-spacing: 0.14em; }
     .wa-badge {
       position: absolute; top: 1.5rem; right: 1.5rem;
       font-family: var(--font-mono); font-size: 0.58rem;
-      letter-spacing: 0.18em; text-transform: uppercase;
+      letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--accent); border: 1px solid var(--accent);
       padding: 0.3rem 0.75rem;
       opacity: 0; transition: opacity 0.3s;
@@ -1052,7 +1045,7 @@ $contact = [
     }
     .cta-full-eyebrow {
       display: block; font-family: var(--font-mono);
-      font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+      font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--text-faint); margin-bottom: 1.5rem;
     }
     .cta-full-heading {
@@ -1074,7 +1067,7 @@ $contact = [
     .footer-nav { display: flex; gap: 2rem; flex: 1; }
     .footer-nav a {
       font-family: var(--font-mono); font-size: 0.62rem;
-      letter-spacing: 0.14em; text-transform: uppercase;
+      letter-spacing: 0.06em; text-transform: uppercase;
       color: var(--text-faint); transition: color 0.18s;
     }
     .footer-nav a:hover { color: var(--accent); }
@@ -1099,6 +1092,8 @@ $contact = [
     /* ── Responsive ─────────────────────────────────────── */
     @media (max-width: 900px) {
       .hero-bottom { grid-template-columns: 1fr; }
+      .hero-bottom-right { align-items: flex-start; }
+      .hero-cta { justify-content: flex-start; }
       .about-editorial { grid-template-columns: 1fr; }
       .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
       .contact-grid { grid-template-columns: 1fr; }
@@ -1117,9 +1112,6 @@ $contact = [
       if (!els.length) return;
       setTimeout(function() {
         els.forEach(function(el) { el.classList.add('is-visible'); });
-        // Social icons fade in slightly after the name finishes
-        var icons = document.querySelector('.hero-social-icons');
-        if (icons) icons.classList.add('is-visible');
       }, 80);
     })();
 
