@@ -116,7 +116,7 @@
   width: 26px;
   height: 2px;
   background: var(--text);
-  border-radius: 2px;
+  border-radius: 0;
   transform-origin: center;
   transition: transform 0.3s cubic-bezier(0.16,1,0.3,1),
               opacity   0.2s ease;
@@ -234,10 +234,11 @@
 .sm-panel-label {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 9vw, 4.5rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.0;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 0.95;
   color: var(--text-muted);
   will-change: transform, opacity;
   transition: color 0.2s ease;
@@ -297,44 +298,42 @@
 
 
 
-/* ── Buttons ──────────────────────────────────────────────── */
+/* ── Buttons — Brutalist Edition ─────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 0.65rem 1.5rem;
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  text-transform: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: 0;
   cursor: pointer;
   transition: var(--transition);
   text-decoration: none;
   white-space: nowrap;
 }
 
-/* Primary: white fill, black text */
+/* Primary: red fill, black text */
 .btn-primary {
   background: var(--accent);
   color: #000;
   border: 1px solid var(--accent);
-  box-shadow: none;
 }
 
 .btn-primary:hover {
-  background: var(--accent-light);
-  border-color: var(--accent-light);
-  color: #000;
-  box-shadow: 0 4px 20px var(--accent-glow);
-  text-shadow: none;
-  transform: translateY(-1px);
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: none;
+  transform: none;
 }
 
-/* Secondary: ghost with warm border */
+/* Secondary: ghost with hard border */
 .btn-secondary {
   background: transparent;
   color: var(--text-muted);
@@ -343,102 +342,99 @@
 
 .btn-secondary:hover {
   color: var(--text);
-  border-color: var(--accent);
-  background: var(--accent-subtle);
-  text-shadow: none;
-  transform: translateY(-1px);
+  border-color: var(--border-cyan);
+  background: transparent;
+  transform: none;
 }
 
-/* Icon button */
+/* Ghost: outline only */
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-warm);
+}
+.btn-ghost:hover {
+  color: var(--text);
+  border-color: var(--border-cyan);
+  background: transparent;
+}
+
+/* Icon button — square */
 .btn-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--bg-card2);
+  width: 36px;
+  height: 36px;
+  border-radius: 0;
+  background: transparent;
   border: 1px solid var(--border);
-  color: var(--text-muted);
-  font-size: 1rem;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   cursor: pointer;
   transition: var(--transition);
   text-decoration: none;
 }
 
 .btn-icon:hover {
-  color: var(--accent-light);
+  color: var(--accent);
   border-color: var(--accent);
-  background: var(--accent-subtle);
-  text-shadow: none;
-  transform: translateY(-1px);
+  background: transparent;
+  transform: none;
 }
 
-/* ── Glass Card ───────────────────────────────────────────── */
+/* ── Hard Card (was Glass Card) — Brutalist ──────────────── */
 .glass-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-warm);
+  border-radius: 0;
   padding: var(--spacing-lg);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.18s ease;
   position: relative;
-  overflow: hidden;
-}
-
-.glass-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, transparent 60%);
-  pointer-events: none;
-  border-radius: inherit;
 }
 
 .glass-card:hover {
-  border-color: var(--border-cyan);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.35), 0 0 0 1px var(--accent-subtle);
-  transform: translateY(-3px);
+  border-color: rgba(240, 240, 240, 0.3);
 }
 
 /* Dark variant */
 .glass-card-dark {
   background: var(--bg-card2);
   border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
+  border-radius: 0;
   padding: var(--spacing-lg);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.18s ease;
 }
 
 .glass-card-dark:hover {
   border-color: var(--border-cyan);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
-/* ── Tag / Badge ──────────────────────────────────────────── */
+/* ── Tag / Badge — Brutalist ──────────────────────────────── */
 .tag {
   display: inline-flex;
   align-items: center;
-  padding: 0.2rem 0.65rem;
-  background: var(--accent-subtle);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius-sm);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  text-transform: none;
-  color: var(--accent-light);
+  padding: 0.2rem 0.6rem;
+  background: transparent;
+  border: 1px solid rgba(240, 240, 240, 0.15);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(240, 240, 240, 0.6);
 }
 
 .tag-pink {
-  background: rgba(184, 124, 110, 0.1);
-  border-color: rgba(184, 124, 110, 0.2);
-  color: var(--pink);
+  border-color: rgba(255, 59, 48, 0.3);
+  color: var(--accent);
 }
 
 .tag-muted {
-  background: rgba(255,240,220,0.04);
-  border-color: var(--border);
-  color: var(--text-muted);
+  border-color: rgba(240, 240, 240, 0.07);
+  color: var(--text-faint);
 }
 
 /* ── Project / Work Card ──────────────────────────────────── */
@@ -623,33 +619,44 @@
   gap: var(--spacing-lg);
 }
 
-/* ── Skill Pill ───────────────────────────────────────────── */
+/* ── Skill Pill — Brutalist ───────────────────────────────── */
 .skill-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: var(--bg-card2);
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  background: transparent;
   border: 1px solid var(--border);
-  border-radius: 999px;
-  font-size: 0.85rem;
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--text-muted);
   transition: var(--transition);
 }
 
 .skill-pill:hover {
   border-color: var(--accent);
-  color: var(--accent-light);
-  background: var(--accent-subtle);
+  color: var(--accent);
+  background: transparent;
+}
+
+.skill-pill.primary {
+  border-color: rgba(240, 240, 240, 0.2);
+  color: var(--text);
 }
 
 .skill-pill .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
+  width: 5px;
+  height: 5px;
+  border-radius: 0;
+  background: var(--text-faint);
   flex-shrink: 0;
 }
+
+.skill-pill.primary .dot { background: var(--accent); }
 
 /* ── Stat / Number Card ───────────────────────────────────── */
 .stat-card {
@@ -747,19 +754,19 @@
 .form-input {
   width: 100%;
   background: var(--bg-card2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--border-warm);
+  border-radius: 0;
   padding: 0.75rem 1rem;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 0.95rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-size: 0.9rem;
+  transition: border-color 0.18s ease;
   outline: none;
 }
 
 .form-input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-glow);
+  box-shadow: none;
 }
 
 .form-input::placeholder { color: var(--text-faint); }
