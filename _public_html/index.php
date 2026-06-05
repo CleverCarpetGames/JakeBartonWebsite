@@ -16,10 +16,6 @@
   <!-- Scroll progress line -->
   <div id="scroll-progress" style="position:fixed;top:0;left:0;height:2px;width:0%;background:var(--accent);z-index:100001;transition:width 0.1s linear;pointer-events:none"></div>
 
-  <!-- Ambient cursor glow -->
-  <div id="cursor-glow" style="position:fixed;top:0;left:0;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.05) 0%,transparent 70%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);transition:opacity 0.3s ease;opacity:0"></div>
-
-
 <?php
 require_once __DIR__ . '/includes/content.php';
 
@@ -637,21 +633,6 @@ $contact = [
     /* ═══════════════════════════════════════════════════════
        Homepage — inline styles (layout-specific overrides)
     ═══════════════════════════════════════════════════════ */
-
-    /* ── Film grain overlay ─────────────────────────────── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: -50%;
-      width: 200%;
-      height: 200%;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-      background-size: 200px 200px;
-      opacity: 0.028;
-      pointer-events: none;
-      z-index: 99998;
-      animation: grain-shift 0.8s steps(1) infinite;
-    }
 
     /* ── Scroll progress bar ────────────────────────────── */
     .scroll-progress {
@@ -1429,27 +1410,6 @@ $contact = [
       ); }, { passive: true });
     })();
 
-    /* ── Ambient cursor glow ──────────────────────────── */
-    (function() {
-      var glow = document.getElementById('cursor-glow');
-      if (!glow || window.matchMedia('(pointer:coarse)').matches) return;
-      var cx = 0, cy = 0, tx = 0, ty = 0;
-      document.addEventListener('mousemove', function(e) {
-        tx = e.clientX; ty = e.clientY;
-        glow.style.opacity = '1';
-      });
-      document.addEventListener('mouseleave', function() { glow.style.opacity = '0'; });
-      function lerp(a, b, t) { return a + (b - a) * t; }
-      function loop() {
-        cx = lerp(cx, tx, 0.07);
-        cy = lerp(cy, ty, 0.07);
-        glow.style.left = cx + 'px';
-        glow.style.top  = cy + 'px';
-        requestAnimationFrame(loop);
-      }
-      loop();
-    })();
-
     /* ── Contact form ─────────────────────────────────── */
     var contactForm = document.getElementById('contactForm');
     if (contactForm) {
@@ -1484,9 +1444,6 @@ $contact = [
 
   <!-- ── Style Kit JS ───────────────────────────────────── -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="assets/js/beams-bg.js"></script>
-  <script src="assets/js/cursor-ribbons.js"></script>
-  <script src="assets/js/fuzzy-text.js"></script>
   <script src="assets/js/staggered-menu.js"></script>
   <script src="assets/js/effects-stylekit.js"></script>
 

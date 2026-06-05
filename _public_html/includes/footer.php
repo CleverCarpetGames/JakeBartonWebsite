@@ -6,9 +6,6 @@
     <?php endif; ?>
 
     <!-- Style Kit JS -->
-    <script src="<?php echo $base_path; ?>assets/js/beams-bg.js"></script>
-    <script src="<?php echo $base_path; ?>assets/js/cursor-ribbons.js"></script>
-    <script src="<?php echo $base_path; ?>assets/js/fuzzy-text.js"></script>
     <script src="<?php echo $base_path; ?>assets/js/effects-stylekit.js"></script>
     
     <!-- Analytics (Add your tracking code here when ready) -->

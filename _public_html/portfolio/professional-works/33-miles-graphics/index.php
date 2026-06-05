@@ -209,9 +209,6 @@ $designs = [
         </div>
     </footer>
 
-    <script src="../../../assets/js/beams-bg.js"></script>
-    <script src="../../../assets/js/cursor-ribbons.js"></script>
-    <script src="../../../assets/js/fuzzy-text.js"></script>
     <script src="../../../assets/js/effects-stylekit.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="../../../assets/js/staggered-menu.js"></script>
