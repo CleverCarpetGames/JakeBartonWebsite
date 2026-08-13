@@ -46,5 +46,8 @@ jobs:
             mirror --reverse --verbose ./_public_html/assets/project-covers/ ./assets/project-covers/;
             mirror --reverse --verbose ./_public_html/assets/uploads/ ./assets/uploads/;
             mirror --reverse --verbose ./_public_html/assets/work/ ./assets/work/;
+            mkdir -p ../storage/cms/pages;
+            put -O ../storage/cms ./storage/cms/blueprint.json;
+            mirror --reverse --verbose ./storage/cms/pages/ ../storage/cms/pages/;
             bye
           "
