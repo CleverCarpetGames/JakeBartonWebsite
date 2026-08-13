@@ -2,6 +2,16 @@
 // Simple router for PHP built-in server
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
+// CMS-managed work pages use one renderer while retaining clean URLs.
+if (preg_match('#^/work/([a-z0-9-]+)/?$#', (string) $uri, $matches)) {
+    $existing = __DIR__ . $uri;
+    if (!is_dir($existing)) {
+        $_GET['slug'] = $matches[1];
+        require __DIR__ . '/work/detail.php';
+        exit;
+    }
+}
+
 // Remove query string from URI
 if ($uri === '/' || $uri === '') {
     require 'index.php';

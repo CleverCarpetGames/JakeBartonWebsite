@@ -11,8 +11,6 @@ define('SITE_DESCRIPTION', 'Portfolio of Jake Barton - Game Designer, 3D Artist,
 
 // Contact Information
 define('CONTACT_EMAIL', 'jbarton4@samford.edu');
-define('CONTACT_PHONE', '615.943.9722');
-define('CONTACT_ADDRESS', '4147 Miles Johnson Pkwy, Birmingham, AL');
 define('INSTAGRAM_HANDLE', 'jakebarton13');
 
 // Personal Information

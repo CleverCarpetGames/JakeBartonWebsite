@@ -5,8 +5,11 @@
         <?php echo $custom_scripts; ?>
     <?php endif; ?>
 
+    <!-- Site-wide smooth scrolling -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.25/dist/lenis.min.js" defer></script>
+    <script src="<?php echo $base_path; ?>assets/js/site-scroll.js?v=20260715-sitewide" defer></script>
+
     <!-- Style Kit JS -->
-    <script src="<?php echo $base_path; ?>assets/js/effects-stylekit.js"></script>
     
     <!-- Analytics (Add your tracking code here when ready) -->
     <?php if (!IS_DEVELOPMENT): ?>
