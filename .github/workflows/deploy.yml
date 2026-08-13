@@ -31,21 +31,20 @@ jobs:
             set net:max-retries 3;
             set net:reconnect-interval-base 5;
             open ftp://$FTP_USER:$FTP_PASS@$FTP_HOST;
-            mirror --reverse --delete --verbose \
-              --exclude-glob .git \
-              --exclude-glob .github \
-              --exclude-glob node_modules \
-              --exclude-glob .DS_Store \
-              --exclude-glob '*.log' \
-              --exclude-glob '*.mp4' \
-              --exclude-glob '*.mov' \
-              --exclude-glob '*.webm' \
-              --exclude-glob '*.mkv' \
-              --exclude-glob 'originals/' \
-              --exclude-glob 'Assets/*.mp4' \
-              --exclude-glob 'Assets/*.mov' \
-              --exclude-glob 'Assets/*.webm' \
-              --exclude-glob 'IronSpark/Assets/' \
-              ./_public_html/ /domains/jakebartoncreative.com/public_html/;
+            cd /domains/jakebartoncreative.com/public_html/;
+            put -O . ./_public_html/.htaccess ./_public_html/index.php ./_public_html/home.php ./_public_html/router.php ./_public_html/contact-handler.php;
+            mirror --reverse --verbose ./_public_html/includes/ ./includes/;
+            mirror --reverse --verbose ./_public_html/studio/ ./studio/;
+            mirror --reverse --verbose ./_public_html/work/ ./work/;
+            mirror --reverse --verbose ./_public_html/assets/brand/ ./assets/brand/;
+            mirror --reverse --verbose ./_public_html/assets/css/ ./assets/css/;
+            mirror --reverse --verbose ./_public_html/assets/documents/ ./assets/documents/;
+            mirror --reverse --verbose ./_public_html/assets/fonts/ ./assets/fonts/;
+            mirror --reverse --verbose ./_public_html/assets/home/ ./assets/home/;
+            mirror --reverse --verbose ./_public_html/assets/js/ ./assets/js/;
+            mirror --reverse --verbose ./_public_html/assets/organizations/ ./assets/organizations/;
+            mirror --reverse --verbose ./_public_html/assets/project-covers/ ./assets/project-covers/;
+            mirror --reverse --verbose ./_public_html/assets/uploads/ ./assets/uploads/;
+            mirror --reverse --verbose ./_public_html/assets/work/ ./assets/work/;
             bye
           "
