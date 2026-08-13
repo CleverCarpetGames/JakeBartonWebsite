@@ -16,6 +16,13 @@ jobs:
       - name: Install lftp
         run: sudo apt-get install -y lftp
 
+      - name: Prepare Studio authentication
+        env:
+          JB_CMS_PASSWORD_HASH: ${{ secrets.JB_CMS_PASSWORD_HASH }}
+        run: |
+          mkdir -p .deploy-private
+          php -r 'file_put_contents(".deploy-private/auth.json", json_encode(["password_hash" => getenv("JB_CMS_PASSWORD_HASH")], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . PHP_EOL);'
+
       - name: Deploy via FTP to Hostinger
         env:
           FTP_HOST: 157.173.214.227
@@ -48,6 +55,7 @@ jobs:
             mirror --reverse --verbose ./_public_html/assets/work/ ./assets/work/;
             mkdir -p ../storage/cms/pages;
             put -O ../storage/cms ./storage/cms/blueprint.json;
+            put -O ../storage/cms ./.deploy-private/auth.json;
             mirror --reverse --verbose ./storage/cms/pages/ ../storage/cms/pages/;
             bye
           "
