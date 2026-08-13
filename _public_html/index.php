@@ -158,9 +158,10 @@ $menu_items = [
                 <?php foreach ($content['home_categories'] as $i => $category): ?>
                     <video
                         class="jb-hero-video <?php echo $i === $hero_start_index ? 'is-active' : ''; ?>"
-                        src="<?php echo h($category['video']); ?>"
+                        src="<?php echo h($category['video']); ?>?v=20260813-video-r1"
                         poster="<?php echo h($category['poster']); ?>"
                         muted
+                        autoplay
                         loop
                         playsinline
                         preload="<?php echo $i === $hero_start_index ? 'auto' : 'metadata'; ?>"
@@ -191,9 +192,10 @@ $menu_items = [
                 <?php foreach ($content['home_categories'] as $i => $category): ?>
                     <video
                         class="jb-action-video <?php echo $i === 0 ? 'is-active' : ''; ?>"
-                        src="<?php echo h($category['video']); ?>"
+                        src="<?php echo h($category['video']); ?>?v=20260813-video-r1"
                         poster="<?php echo h($category['poster']); ?>"
                         muted
+                        autoplay
                         loop
                         playsinline
                         preload="<?php echo $i === 0 ? 'auto' : 'metadata'; ?>"
@@ -273,9 +275,10 @@ $menu_items = [
             <span class="jb-footer-word-mask" aria-hidden="true">
                 <?php foreach ($content['home_categories'] as $i => $category): ?>
                     <video
-                        src="<?php echo h($category['video']); ?>"
+                        src="<?php echo h($category['video']); ?>?v=20260813-video-r1"
                         poster="<?php echo h($category['poster']); ?>"
                         muted
+                        autoplay
                         loop
                         playsinline
                         preload="metadata"
@@ -296,8 +299,8 @@ $menu_items = [
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.25/dist/lenis.min.js" defer></script>
-    <script src="assets/js/site-scroll.js?v=20260715-sitewide" defer></script>
-    <script src="assets/js/piranha-home.js?v=20260803-hero-zoom-lock" defer></script>
-    <script src="assets/js/page-loader.js?v=20260714-home-loader-restored" defer></script>
+    <script src="assets/js/site-scroll.js?v=20260813-video-r1" defer></script>
+    <script src="assets/js/piranha-home.js?v=20260813-video-r1" defer></script>
+    <script src="assets/js/page-loader.js?v=20260813-video-r1" defer></script>
 </body>
 </html>
